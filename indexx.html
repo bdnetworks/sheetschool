@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ফাকল পুলিশ লাইন্স স্কুল অ্যান্ড কলেজ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0a2240;--navy2:#1a3a5c;--gold:#c8962a;--gold2:#e8b84b;
+  --green:#1b6b3a;--green2:#27a858;--light:#f4f7fb;
+  --muted:#5a6a7a;--border:#e0e8f0;--r:10px;--sh:0 2px 16px rgba(10,34,64,.09);
+  --red:#dc2626;--blue:#1d4ed8;--purple:#7c3aed;
+  --sidebar-w:260px;--header-h:60px;
+}
+html{scroll-behavior:smooth;font-size:15px}
+body{font-family:'Hind Siliguri',sans-serif;background:var(--light);color:#1e293b;line-height:1.6}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer}
+img{max-width:100%}
+.page{display:none}.page.active{display:block}
+
+/* TOPBAR */
+.topbar{background:var(--navy);color:#fff;font-size:12px;padding:5px 0;border-bottom:2px solid var(--gold)}
+.topbar-inner{max-width:1240px;margin:auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.topbar a{color:var(--gold2);text-decoration:none;margin-left:10px}
+.mq-wrap{overflow:hidden;flex:1;max-width:55%}
+.mq-wrap span{display:inline-block;white-space:nowrap;animation:mq 30s linear infinite}
+@keyframes mq{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:900;box-shadow:0 2px 12px rgba(10,34,64,.12)}
+.hdr-top{padding:12px 20px;display:flex;align-items:center;justify-content:space-between;max-width:1240px;margin:auto;gap:12px}
+.logo-wrap{display:flex;align-items:center;gap:12px;cursor:pointer}
+.logo-img{width:54px;height:54px;border-radius:50%;object-fit:cover;border:3px solid var(--gold2)}
+.logo-circle{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#fff;border:3px solid var(--gold2);flex-shrink:0}
+.hdr-name{font-family:'Noto Serif Bengali',serif;font-size:17px;color:#fff;font-weight:700;line-height:1.3}
+.hdr-slogan{font-size:11px;color:var(--gold2);margin-top:1px}
+.hdr-contact{text-align:right;color:#b0c4d8;font-size:11px;line-height:1.9}
+.hdr-contact strong{color:var(--gold2)}
+.nav-inner{max-width:1240px;margin:auto;padding:0 20px;display:flex;align-items:center;flex-wrap:wrap}
+.nav-inner a{color:#d0e4f7;padding:10px 11px;font-size:13px;font-weight:500;display:block;transition:.2s;cursor:pointer;white-space:nowrap}
+.nav-inner a:hover,.nav-inner a.active{color:#fff;background:rgba(200,150,42,.2);border-bottom:3px solid var(--gold)}
+.nav-dd{position:relative}
+.nav-dd .sub{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--border);border-radius:0 0 10px 10px;min-width:185px;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:100}
+.nav-dd:hover .sub{display:block}
+.sub a{color:#1e293b!important;padding:9px 16px!important;font-size:12px!important;border-bottom:1px solid #f0f4f8;display:block}
+.sub a:hover{background:var(--light)!important}
+.nav-admin-btn{margin-left:auto;background:var(--gold);color:#fff!important;border-radius:30px;padding:6px 15px!important;font-size:12px!important}
+.nav-admin-btn:hover{background:var(--gold2)!important;border-bottom:none!important}
+.hamburger{display:none;background:none;border:none;color:#fff;font-size:20px;cursor:pointer;padding:7px;margin-left:auto}
+@media(max-width:768px){
+  .nav-inner{display:none;flex-direction:column;align-items:stretch}
+  .nav-inner.open{display:flex}
+  .nav-dd .sub{position:static;box-shadow:none;border:none;background:rgba(0,0,0,.15)}
+  .sub a{color:#d0e4f7!important}
+  .hamburger{display:block}
+  .hdr-contact{display:none}
+}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;height:460px;background:var(--navy)}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .75s;background-size:cover;background-position:center}
+.hero-slide.active{opacity:1}
+.hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,34,64,.78) 0%,rgba(10,34,64,.22) 100%)}
+.hero-content{position:absolute;bottom:60px;left:60px;z-index:2;color:#fff;max-width:540px}
+.hero-content h2{font-family:'Noto Serif Bengali',serif;font-size:30px;font-weight:700;line-height:1.35;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+.hero-content p{font-size:14px;opacity:.9;margin-top:7px}
+.hero-btns{display:flex;gap:9px;margin-top:16px;flex-wrap:wrap}
+.hero-dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:3}
+.hdot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.35);cursor:pointer;transition:.3s}
+.hdot.active{background:var(--gold);width:22px;border-radius:4px}
+.hero-arrows{position:absolute;top:50%;transform:translateY(-50%);width:100%;display:flex;justify-content:space-between;padding:0 12px;z-index:3;pointer-events:none}
+.hero-arrows button{pointer-events:all;background:rgba(255,255,255,.12);border:none;color:#fff;width:38px;height:38px;border-radius:50%;font-size:16px;cursor:pointer;backdrop-filter:blur(4px);transition:.2s}
+.hero-arrows button:hover{background:rgba(200,150,42,.65)}
+@media(max-width:600px){.hero{height:290px}.hero-content{left:18px;bottom:36px}.hero-content h2{font-size:19px}}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:5px;padding:9px 20px;border-radius:30px;font-weight:600;font-size:13px;border:none;cursor:pointer;transition:.2s;font-family:inherit}
+.btn-gold{background:var(--gold);color:#fff}.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}.btn-outline:hover{background:rgba(255,255,255,.1)}
+.btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{background:var(--navy2)}
+.btn-green{background:var(--green);color:#fff}.btn-green:hover{background:var(--green2)}
+.btn-danger{background:var(--red);color:#fff}.btn-danger:hover{background:#b91c1c}
+.btn-sm{padding:5px 12px;font-size:12px}
+.btn-xs{padding:3px 9px;font-size:11px}
+.btn-warning{background:#d97706;color:#fff}.btn-warning:hover{background:#b45309}
+
+/* URGENT */
+.urgent-bar{background:linear-gradient(90deg,#7b1212,#b91c1c);color:#fff;padding:8px 0}
+.urgent-inner{max-width:1240px;margin:auto;padding:0 20px;display:flex;align-items:center;gap:10px}
+.urg-label{background:rgba(255,255,255,.16);padding:3px 11px;border-radius:20px;font-size:11px;white-space:nowrap;font-weight:700}
+.urg-scroll{overflow:hidden;flex:1}
+.urg-scroll span{display:inline-block;white-space:nowrap;animation:mq 24s linear infinite;font-size:12px}
+
+/* STATS */
+.stats-bar{background:var(--navy)}
+.stats-inner{max-width:1240px;margin:auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+.stat-box{text-align:center;padding:18px 8px;border-right:1px solid rgba(255,255,255,.08)}
+.stat-box:last-child{border-right:none}
+.stat-num{font-size:28px;font-weight:700;color:var(--gold2);font-family:'Noto Serif Bengali',serif}
+.stat-lbl{font-size:11px;color:#aec8e0;margin-top:2px}
+
+/* SECTIONS */
+.sec{padding:48px 0}
+.container{max-width:1240px;margin:auto;padding:0 20px}
+.sec-head{text-align:center;margin-bottom:36px}
+.sec-head h2{font-family:'Noto Serif Bengali',serif;font-size:25px;font-weight:700;color:var(--navy);display:inline-block}
+.sec-head h2::after{content:'';display:block;width:48px;height:3px;background:var(--gold);margin:7px auto 0;border-radius:3px}
+.sec-head p{color:var(--muted);margin-top:8px;font-size:13px}
+.bg-light{background:var(--light)}
+.bg-white{background:#fff}
+.bg-navy{background:var(--navy)}
+.bg-navy .sec-head h2{color:#fff}
+.bg-navy .sec-head p{color:#aec8e0}
+
+/* HISTORY */
+.history-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.hbox{background:#fff;border-radius:var(--r);padding:22px;box-shadow:var(--sh);border-left:4px solid var(--navy)}
+.hbox h3{font-family:'Noto Serif Bengali',serif;font-size:16px;color:var(--navy);margin-bottom:9px}
+.speech-card{background:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--sh);display:flex;gap:12px;align-items:flex-start}
+.speech-img{width:68px;height:68px;border-radius:50%;object-fit:cover;border:3px solid var(--gold);flex-shrink:0}
+.speech-body h4{font-size:13px;font-weight:700;color:var(--navy)}
+.speech-body .role{font-size:10px;color:var(--gold);font-weight:700;margin-bottom:5px}
+.speech-body p{font-size:12px;color:#555;line-height:1.75}
+@media(max-width:768px){.history-grid{grid-template-columns:1fr}}
+
+/* NOTICE BOARD */
+.nb-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.nb-panel{background:var(--light);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.nb-head{padding:11px 15px;display:flex;align-items:center;justify-content:space-between}
+.nb-head h3{font-size:13px;font-weight:700;color:#fff}
+.nb-head a{color:var(--gold2);font-size:12px;cursor:pointer}
+.nb-list{padding:7px}
+.nb-item{background:#fff;border-radius:7px;padding:11px 13px;margin:4px 0;border-left:3px solid var(--gold);cursor:pointer;transition:.2s}
+.nb-item:hover{transform:translateX(3px);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.nb-item h4{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.nb-meta{display:flex;gap:7px;font-size:11px;color:var(--muted);align-items:center;flex-wrap:wrap}
+.badge{display:inline-block;padding:1px 8px;border-radius:20px;font-size:10px;font-weight:700}
+.b-red{background:#fee2e2;color:#b91c1c}.b-blue{background:#dbeafe;color:#1d4ed8}
+.b-green{background:#dcfce7;color:#15803d}.b-gold{background:#fef9c3;color:#92400e}
+@media(max-width:768px){.nb-grid{grid-template-columns:1fr}}
+
+/* CORNERS */
+.corners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:14px}
+.corner-card{background:#fff;border-radius:var(--r);padding:22px 16px;box-shadow:var(--sh);text-align:center;transition:.3s}
+.corner-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(10,34,64,.12)}
+.c-icon{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 10px}
+.corner-card h3{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.c-links a{display:block;font-size:12px;color:var(--navy2);padding:3px 0;border-bottom:1px solid #f0f4f8;text-align:left;cursor:pointer}
+.c-links a::before{content:'› '}
+.c-links a:hover{color:var(--gold)}
+
+/* GALLERY */
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.g-item{border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:4/3;cursor:pointer}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.g-item:hover img{transform:scale(1.06)}
+.g-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;padding:16px 11px 8px;font-size:11px;transform:translateY(100%);transition:.3s}
+.g-item:hover .g-cap{transform:none}
+
+/* TEACHERS */
+.tea-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.t-card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);text-align:center;transition:.3s}
+.t-card:hover{transform:translateY(-3px)}
+.t-img{height:150px;overflow:hidden;background:#f0f4f8;display:flex;align-items:center;justify-content:center}
+.t-img img{width:100%;height:100%;object-fit:cover}
+.t-info{padding:11px 8px}
+.t-info h4{font-size:12px;font-weight:700;color:var(--navy)}
+.t-info .dept{font-size:10px;color:var(--gold);font-weight:700;margin-top:1px}
+.t-info .edu{font-size:10px;color:var(--muted);margin-top:2px}
+
+/* DOWNLOADS */
+.dl-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:11px}
+.dl-item{background:#fff;border-radius:var(--r);padding:13px 15px;display:flex;align-items:center;gap:10px;box-shadow:var(--sh);text-decoration:none;color:inherit;transition:.2s;border-left:3px solid transparent}
+.dl-item:hover{border-left-color:var(--gold);transform:translateY(-2px)}
+.dl-icon{width:38px;height:38px;background:var(--light);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.dl-info h4{font-size:12px;font-weight:700;color:var(--navy)}
+.dl-info span{font-size:11px;color:var(--muted)}
+
+/* LINKS */
+.links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:10px}
+.link-item{background:#fff;border-radius:var(--r);padding:13px 15px;display:flex;align-items:center;gap:9px;box-shadow:var(--sh);text-decoration:none;border-bottom:3px solid transparent;transition:.2s}
+.link-item:hover{border-bottom-color:var(--navy);transform:translateY(-2px)}
+.link-item span{font-size:12px;font-weight:700;color:var(--navy)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cbox{background:#fff;border-radius:var(--r);padding:22px;box-shadow:var(--sh)}
+.cbox h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--light)}
+.info-row{display:flex;gap:10px;margin:9px 0;align-items:flex-start}
+.i-icon{width:30px;height:30px;background:var(--navy);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--gold2);flex-shrink:0;font-size:12px}
+.info-row strong{display:block;font-size:11px;color:var(--muted);margin-bottom:1px}
+.info-row p{font-size:12px}
+.social-links{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.sl{display:inline-flex;align-items:center;gap:6px;padding:7px 13px;border-radius:30px;font-size:12px;font-weight:700;text-decoration:none;transition:.2s}
+.sl-fb{background:#1877f2;color:#fff}.sl-yt{background:#ff0000;color:#fff}.sl-web{background:var(--navy);color:#fff}
+.sl:hover{opacity:.85;transform:translateY(-2px)}
+.map-wrap{border-radius:var(--r);overflow:hidden;height:260px}
+.map-wrap iframe{width:100%;height:100%;border:none}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+
+/* FOOTER */
+.footer{background:var(--navy);color:#aec8e0;padding:36px 0 14px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px;margin-bottom:22px}
+.fc h4{font-size:12px;font-weight:700;color:#fff;margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid rgba(200,150,42,.3)}
+.fc p{font-size:11px;line-height:1.9}
+.fc a{display:block;font-size:11px;color:#aec8e0;padding:2px 0;cursor:pointer;transition:.2s}
+.fc a::before{content:'› ';color:var(--gold)}
+.fc a:hover{color:var(--gold2)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:14px;text-align:center;font-size:11px;color:#5a7a90}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:40px 0 28px}
+.page-hero h1{font-family:'Noto Serif Bengali',serif;font-size:24px;font-weight:700}
+.page-hero p{color:#aec8e0;margin-top:4px;font-size:12px}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:11px;color:#aec8e0;margin-bottom:8px}
+.breadcrumb a{color:var(--gold2);cursor:pointer}
+
+/* NOTICE DETAIL */
+.nd-back{display:inline-flex;align-items:center;gap:5px;color:var(--navy2);font-size:12px;cursor:pointer;font-weight:700;margin-bottom:14px}
+.nd-box{background:#fff;border-radius:var(--r);padding:28px;box-shadow:var(--sh)}
+.nd-body{font-size:13px;color:#444;line-height:2;white-space:pre-wrap}
+
+/* RESULTS */
+.result-search{background:#fff;border-radius:var(--r);padding:20px;box-shadow:var(--sh);margin-bottom:20px}
+.sf{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px;align-items:end}
+.fg label{display:block;font-size:11px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.fg input,.fg select{width:100%;padding:8px 11px;border:1.5px solid var(--border);border-radius:8px;font-size:12px;font-family:inherit;background:#fff}
+.fg input:focus,.fg select:focus{border-color:var(--navy);outline:none}
+.res-wrap{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+table{width:100%;border-collapse:collapse}
+thead{background:var(--navy2);color:#fff}
+th{padding:10px 13px;font-size:11px;font-weight:700;text-align:left}
+td{padding:10px 13px;font-size:12px;border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#f8fafd}
+.grd{display:inline-block;padding:2px 9px;border-radius:20px;font-size:10px;font-weight:700}
+.gAp{background:#dcfce7;color:#15803d}.gA{background:#dbeafe;color:#1d4ed8}
+.gB{background:#fef9c3;color:#92400e}.gC{background:#fee2e2;color:#b91c1c}.gF{background:#f1f5f9;color:#475569}
+.no-res{text-align:center;padding:40px;color:var(--muted)}
+.no-res span{font-size:38px;display:block;margin-bottom:10px}
+
+/* GALLERY PAGE */
+.gp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.gp-item{border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:4/3;cursor:pointer;box-shadow:var(--sh)}
+.gp-item img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.gp-item:hover img{transform:scale(1.05)}
+.gp-cap{position:absolute;bottom:0;left:0;right:0;padding:14px 11px 8px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.58));font-size:11px;transform:translateY(100%);transition:.3s}
+.gp-item:hover .gp-cap{transform:none}
+
+/* ADMISSION */
+.adm-form{background:#fff;border-radius:var(--r);padding:26px;box-shadow:var(--sh);max-width:640px;margin:0 auto}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:580px){.fr2{grid-template-columns:1fr}}
+
+/* LIGHTBOX */
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:2000;align-items:center;justify-content:center;flex-direction:column;padding:20px}
+#lb.show{display:flex}
+#lb img{max-width:90vw;max-height:82vh;border-radius:8px;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.5)}
+#lb p{color:#fff;margin-top:9px;font-size:12px;text-align:center}
+#lb-close{position:absolute;top:16px;right:18px;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:28px;cursor:pointer;line-height:1;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center}
+
+/* ADMIN SHELL */
+#adminShell{display:none;position:fixed;inset:0;z-index:1100;background:var(--light)}
+#adminShell.show{display:flex}
+
+/* SIDEBAR */
+.adm-sidebar{width:var(--sidebar-w);background:#0f172a;color:#e2e8f0;display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto;transition:.3s}
+.adm-logo{padding:18px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.07)}
+.adm-logo .lc{width:38px;height:38px;border-radius:9px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0}
+.adm-logo-name{font-size:13px;font-weight:700;color:#fff;line-height:1.3}
+.adm-logo-sub{font-size:10px;color:#64748b;margin-top:1px}
+.adm-nav{flex:1;padding:12px 0}
+.adm-nav-section{font-size:10px;font-weight:700;color:#475569;padding:8px 20px 4px;letter-spacing:.08em;text-transform:uppercase}
+.adm-nav a{display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:12px;color:#94a3b8;cursor:pointer;transition:.2s;border-left:3px solid transparent}
+.adm-nav a:hover{background:rgba(255,255,255,.05);color:#e2e8f0}
+.adm-nav a.active{background:rgba(200,150,42,.12);color:var(--gold2);border-left-color:var(--gold)}
+.adm-nav a .icon{font-size:15px;width:20px;text-align:center;flex-shrink:0}
+.adm-nav a .badge-count{margin-left:auto;background:var(--red);color:#fff;font-size:10px;padding:1px 6px;border-radius:20px}
+.adm-footer{padding:14px 20px;border-top:1px solid rgba(255,255,255,.07)}
+.adm-footer a{display:flex;align-items:center;gap:8px;font-size:12px;color:#64748b;cursor:pointer;transition:.2s;margin-bottom:4px}
+.adm-footer a:hover{color:#e2e8f0}
+
+/* ADMIN MAIN */
+.adm-main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.adm-topbar{height:var(--header-h);background:#fff;border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 24px;gap:14px;flex-shrink:0}
+.adm-topbar-title{font-size:15px;font-weight:700;color:var(--navy);flex:1}
+.adm-topbar .adm-user{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.adm-topbar .adm-user .av{width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
+.adm-content{flex:1;overflow-y:auto;padding:24px}
+.adm-panel{display:none}
+.adm-panel.active{display:block}
+
+/* DASHBOARD CARDS */
+.dash-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:14px;margin-bottom:22px}
+.kpi-card{background:#fff;border-radius:var(--r);padding:18px 16px;box-shadow:var(--sh);border-left:4px solid var(--navy);display:flex;align-items:center;gap:14px;transition:.2s}
+.kpi-card:hover{box-shadow:0 4px 20px rgba(10,34,64,.14);transform:translateY(-2px)}
+.kpi-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.kpi-val{font-size:22px;font-weight:700;color:var(--navy);font-family:'Noto Serif Bengali',serif;line-height:1.2}
+.kpi-lbl{font-size:11px;color:var(--muted);margin-top:2px}
+.kpi-card.green{border-left-color:var(--green)}.kpi-card.green .kpi-icon{background:#dcfce7}
+.kpi-card.gold{border-left-color:var(--gold)}.kpi-card.gold .kpi-icon{background:#fef9c3}
+.kpi-card.red{border-left-color:var(--red)}.kpi-card.red .kpi-icon{background:#fee2e2}
+.kpi-card.blue{border-left-color:var(--blue)}.kpi-card.blue .kpi-icon{background:#dbeafe}
+
+/* DASH ROW */
+.dash-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:900px){.dash-row{grid-template-columns:1fr}}
+.dash-widget{background:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--sh)}
+.dash-widget h3{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.dw-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f8fafc;font-size:12px}
+.dw-row:last-child{border-bottom:none}
+.status-paid{color:var(--green);font-weight:700}.status-due{color:var(--red);font-weight:700}.status-partial{color:#d97706;font-weight:700}
+.cw-row{display:flex;align-items:center;gap:10px;padding:5px 0;font-size:12px}
+.cw-bar{flex:1;height:8px;background:#e2e8f0;border-radius:4px;overflow:hidden}
+.cw-fill{height:100%;background:var(--gold);border-radius:4px}
+.cw-cnt{width:28px;text-align:right;font-weight:700;color:var(--navy)}
+
+/* ADMIN FORMS */
+.card{background:#fff;border-radius:var(--r);padding:20px;box-shadow:var(--sh);margin-bottom:16px}
+.card h3{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--border)}
+.fg{margin-bottom:13px}
+.fg label{display:block;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.fg input,.fg textarea,.fg select{width:100%;padding:8px 11px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:inherit;background:#fff;transition:.2s}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--navy);outline:none;box-shadow:0 0 0 3px rgba(10,34,64,.06)}
+.fg textarea{min-height:80px;resize:vertical}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fg-row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+@media(max-width:600px){.fg-row,.fg-row3{grid-template-columns:1fr}}
+.suc{background:#dcfce7;color:#15803d;padding:8px 12px;border-radius:7px;font-size:12px;margin:6px 0;font-weight:700}
+.err{background:#fee2e2;color:#b91c1c;padding:8px 12px;border-radius:7px;font-size:12px;margin:6px 0}
+.info{background:#dbeafe;color:#1d4ed8;padding:8px 12px;border-radius:7px;font-size:12px;margin:6px 0}
+
+/* ITEM LIST */
+.item-list{margin-top:10px;display:flex;flex-direction:column;gap:5px}
+.item-row{display:flex;align-items:flex-start;gap:8px;padding:10px 12px;background:var(--light);border-radius:8px;font-size:12px;flex-wrap:wrap}
+.ir-main{flex:1;min-width:0;color:var(--navy)}
+.ir-sub{font-size:10px;color:var(--muted);margin-top:2px;white-space:normal}
+.ir-actions{display:flex;gap:5px;flex-shrink:0;align-items:center}
+
+/* GALLERY ADMIN GRID */
+.gal-admin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:10px}
+.gal-admin-item{border-radius:8px;overflow:hidden;position:relative;aspect-ratio:4/3;background:#f0f4f8;box-shadow:var(--sh)}
+.gal-admin-item img{width:100%;height:100%;object-fit:cover;display:block}
+.gal-admin-overlay{position:absolute;inset:0;background:rgba(0,0,0,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;opacity:0;transition:.2s}
+.gal-admin-item:hover .gal-admin-overlay{opacity:1}
+.gal-admin-caption{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.5);color:#fff;font-size:9px;padding:3px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* SLIDER ADMIN CARDS */
+.slider-admin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:10px}
+.slider-admin-card{border-radius:10px;overflow:hidden;position:relative;background:#e2e8f0;box-shadow:var(--sh)}
+.slider-admin-card .sac-bg{height:100px;background-size:cover;background-position:center;position:relative}
+.slider-admin-card .sac-bg::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.4)}
+.slider-admin-card .sac-title{position:absolute;bottom:6px;left:8px;color:#fff;font-size:11px;font-weight:700;z-index:2;text-shadow:0 1px 4px rgba(0,0,0,.8)}
+.slider-admin-card .sac-body{padding:10px 12px;background:#fff}
+.slider-admin-card .sac-sub{font-size:10px;color:var(--muted);margin-bottom:6px}
+.slider-admin-card .sac-actions{display:flex;gap:5px}
+
+/* FEES TABLE */
+.ftable{width:100%;border-collapse:collapse;font-size:12px}
+.ftable th{background:var(--navy2);color:#fff;padding:9px 12px;text-align:left;font-weight:700}
+.ftable td{padding:9px 12px;border-bottom:1px solid var(--border)}
+.ftable tr:last-child td{border-bottom:none}
+.ftable tr:hover td{background:#f8fafd}
+
+/* SETTINGS TABS */
+.stabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.stab{padding:7px 14px;border:1.5px solid var(--border);border-radius:20px;cursor:pointer;font-size:12px;font-weight:700;background:#fff;color:var(--muted);transition:.2s}
+.stab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.stab-panel{display:none}.stab-panel.show{display:block}
+
+/* MOBILE ADMIN */
+.adm-sidebar-toggle{display:none;background:none;border:none;color:var(--navy);font-size:20px;cursor:pointer}
+@media(max-width:768px){
+  .adm-sidebar{position:fixed;left:-100%;top:0;bottom:0;z-index:50;transition:.3s}
+  .adm-sidebar.open{left:0}
+  .adm-sidebar-toggle{display:block}
+  .adm-content{padding:14px}
+  .dash-kpi{grid-template-columns:1fr 1fr}
+}
+@media(max-width:420px){.dash-kpi{grid-template-columns:1fr}}
+
+/* ADMIN LOGIN */
+.admin-login-screen{flex:1;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%)}
+.login-card{background:#fff;border-radius:16px;padding:40px 36px;max-width:360px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);text-align:center}
+.login-card .llogo{width:60px;height:60px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#fff;margin:0 auto 16px}
+.login-card h2{font-family:'Noto Serif Bengali',serif;font-size:18px;color:var(--navy);margin-bottom:6px}
+.login-card p{font-size:12px;color:var(--muted);margin-bottom:20px}
+.login-card input{width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:9px;font-size:14px;margin-bottom:10px;font-family:inherit}
+.login-card input:focus{border-color:var(--navy);outline:none}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1500;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.show{display:flex}
+.modal-box{background:#fff;border-radius:var(--r);padding:24px;max-width:520px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto}
+.modal-box h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--border)}
+.modal-footer{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+
+/* MISC */
+.tag{display:inline-block;padding:1px 8px;border-radius:20px;font-size:10px;font-weight:700;background:#dbeafe;color:#1d4ed8;margin-right:3px}
+.tbl-wrap{overflow-x:auto}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:#f0f4f8}
+::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+</style>
+</head>
+<body>
+
+<!-- ════ PUBLIC SITE ════ -->
+<div id="publicSite">
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="mq-wrap"><span id="topMarquee">লোড হচ্ছে...</span></div>
+    <div><span id="topPhone"></span><a onclick="openAdmin()">🔐 এডমিন</a></div>
+  </div>
+</div>
+
+<div class="site-header">
+  <div id="hdrTop" style="background:var(--navy)">
+    <div class="hdr-top">
+      <div class="logo-wrap" onclick="nav('home')">
+        <div id="logoDisplay"><div class="logo-circle" style="background:var(--gold)">ফা</div></div>
+        <div><div class="hdr-name" id="siteName">ফাকল পুলিশ লাইন্স স্কুল অ্যান্ড কলেজ</div>
+          <div class="hdr-slogan" id="siteSlogan">শিক্ষার উজ্জ্বল দিগন্ত</div></div>
+      </div>
+      <div class="hdr-contact">
+        <div><strong>ফোন:</strong> <span id="hPhone">—</span></div>
+        <div><strong>ইমেইল:</strong> <span id="hEmail">—</span></div>
+      </div>
+      <button class="hamburger" onclick="document.getElementById('mainNav').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+  <div id="navWrap" style="background:var(--navy2)">
+    <div class="nav-inner" id="mainNav">
+      <a onclick="nav('home')" id="n-home" class="active">🏠 হোম</a>
+      <a onclick="nav('history')" id="n-history">🏛 ইতিহাস</a>
+      <a onclick="nav('notices')" id="n-notices">📢 নোটিশ</a>
+      <a onclick="nav('results')" id="n-results">📊 রেজাল্ট</a>
+      <div class="nav-dd"><a>📚 একাডেমিক ▾</a>
+        <div class="sub">
+          <a onclick="nav('admission')">অনলাইন এডমিশন</a>
+          <a onclick="nav('teachers')">শিক্ষক মণ্ডলী</a>
+          <a onclick="nav('downloads')">ডাউনলোড</a>
+        </div>
+      </div>
+      <a onclick="nav('gallery')" id="n-gallery">🖼 গ্যালারি</a>
+      <a onclick="nav('links')" id="n-links">🔗 লিংক</a>
+      <a onclick="nav('contact')" id="n-contact">📞 যোগাযোগ</a>
+      <a class="nav-admin-btn" onclick="openAdmin()">🔐 এডমিন</a>
+    </div>
+  </div>
+</div>
+
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div id="heroSlides"></div>
+    <div class="hero-arrows">
+      <button onclick="chSlide(-1)">&#8592;</button>
+      <button onclick="chSlide(1)">&#8594;</button>
+    </div>
+    <div class="hero-dots" id="heroDots"></div>
+  </div>
+  <div class="urgent-bar"><div class="urgent-inner">
+    <span class="urg-label">⚠️ জরুরি</span>
+    <div class="urg-scroll"><span id="urgentText">লোড হচ্ছে...</span></div>
+  </div></div>
+  <div class="stats-bar"><div class="stats-inner">
+    <div class="stat-box"><div class="stat-num" id="st1">—</div><div class="stat-lbl">মোট শিক্ষার্থী</div></div>
+    <div class="stat-box"><div class="stat-num" id="st2">—</div><div class="stat-lbl">অভিজ্ঞ শিক্ষক</div></div>
+    <div class="stat-box"><div class="stat-num" id="st3">—</div><div class="stat-lbl">পাশের হার</div></div>
+    <div class="stat-box"><div class="stat-num" id="st4">—</div><div class="stat-lbl">বছরের ঐতিহ্য</div></div>
+    <div class="stat-box"><div class="stat-num" id="st5">—</div><div class="stat-lbl">শ্রেণিসমূহ</div></div>
+  </div></div>
+
+  <div class="sec bg-white"><div class="container">
+    <div class="sec-head"><h2>প্রতিষ্ঠানের পরিচিতি</h2><p>আমাদের গর্বিত ইতিহাস ও নেতৃত্বের বাণী</p></div>
+    <div class="history-grid">
+      <div>
+        <div class="hbox"><h3>🏛️ সংক্ষিপ্ত ইতিহাস</h3>
+          <p id="historyHome" style="font-size:13px;color:#444;line-height:1.9"></p>
+          <button class="btn btn-gold btn-sm" style="margin-top:12px" onclick="nav('history')">বিস্তারিত →</button>
+        </div>
+        <div style="margin-top:14px" class="speech-card">
+          <img class="speech-img" id="presPhoto" src="" alt="" onerror="this.style.display='none'">
+          <div class="speech-body"><h4 id="presName"></h4><div class="role">🏅 সভাপতির বাণী</div><p id="presSpeech"></p></div>
+        </div>
+      </div>
+      <div>
+        <div class="speech-card" style="margin-bottom:14px">
+          <img class="speech-img" id="prinPhoto" src="" alt="" onerror="this.style.display='none'">
+          <div class="speech-body"><h4 id="prinName"></h4><div class="role">🎓 অধ্যক্ষের বাণী</div><p id="prinSpeech"></p></div>
+        </div>
+        <div class="hbox" style="border-left-color:var(--gold)">
+          <h3>🎯 আমাদের লক্ষ্য</h3>
+          <p id="missionHome" style="font-size:13px;color:#444;line-height:1.9"></p>
+        </div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="sec bg-light"><div class="container">
+    <div class="sec-head"><h2>নোটিশ বোর্ড</h2><p>সর্বশেষ বিজ্ঞপ্তি ও ঘোষণা</p></div>
+    <div class="nb-grid">
+      <div class="nb-panel">
+        <div class="nb-head" style="background:var(--navy)"><h3>📢 সাধারণ নোটিশ</h3><a onclick="nav('notices')">সব দেখুন »</a></div>
+        <div class="nb-list" id="homeNotices"></div>
+      </div>
+      <div class="nb-panel">
+        <div class="nb-head" style="background:var(--green)"><h3>📊 পরীক্ষার রেজাল্ট</h3><a onclick="nav('results')">রেজাল্ট »</a></div>
+        <div class="nb-list" id="homeResults"></div>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="sec bg-white"><div class="container">
+    <div class="sec-head"><h2>কর্নার সমূহ</h2><p>শিক্ষার্থী, অভিভাবক ও শিক্ষকদের জন্য</p></div>
+    <div class="corners-grid" id="cornersGrid"></div>
+  </div></div>
+
+  <div class="sec bg-navy"><div class="container">
+    <div class="sec-head"><h2>ফটো গ্যালারি</h2><p>স্মরণীয় মুহূর্তসমূহ</p></div>
+    <div class="gal-grid" id="homeGallery"></div>
+    <div style="text-align:center;margin-top:20px"><button class="btn btn-gold" onclick="nav('gallery')">সব ছবি দেখুন →</button></div>
+  </div></div>
+
+  <footer class="footer"><div class="container">
+    <div class="footer-grid" id="footerGrid"></div>
+    <div class="footer-bottom">&copy; <span id="yr"></span> <span id="footerName"></span> — <span id="footerCopy"></span></div>
+  </div></footer>
+</div>
+
+<!-- NOTICES PAGE -->
+<div class="page" id="page-notices">
+  <div class="page-hero"><div class="container">
+    <div class="breadcrumb"><a onclick="nav('home')">হোম</a><span>›</span><span>নোটিশ বোর্ড</span></div>
+    <h1>📢 নোটিশ বোর্ড</h1>
+  </div></div>
+  <div class="sec" id="noticeListSec"><div class="container">
+    <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap">
+      <button class="btn btn-sm btn-navy" onclick="filterNotices('')">সব</button>
+      <button class="btn btn-sm" style="background:#fee2e2;color:#b91c1c" onclick="filterNotices('urgent')">জরুরি</button>
+      <button class="btn btn-sm" style="background:#dbeafe;color:#1d4ed8" onclick="filterNotices('exam')">পরীক্ষা</button>
+      <button class="btn btn-sm" style="background:#dcfce7;color:#15803d" onclick="filterNotices('general')">সাধারণ</button>
+    </div>
+    <div id="noticeFullList" style="display:flex;flex-direction:column;gap:11px"></div>
+  </div></div>
+  <div class="sec" id="noticeDetailSec" style="display:none"><div class="container" style="max-width:780px">
+    <div class="nd-back" onclick="showNL()">← নোটিশ তালিকায় ফিরুন</div>
+    <div class="nd-box"><div id="noticeDetailContent"></div></div>
+  </div></div>
+  <footer class="footer"><div class="container"><div class="footer-bottom">&copy; <span class="yr2"></span> <span class="fn2"></span></div></div></footer>
+</div>
+
+<!-- RESULTS PAGE -->
+<div class="page" id="page-results">
+  <div class="page-hero"><div class="container">
+    <div class="breadcrumb"><a onclick="nav('home')">হোম</a><span>›</span><span>রেজাল্ট</span></div>
+    <h1>📊 পরীক্ষার রেজাল্ট</h1>
+  </div></div>
+  <div class="sec"><div class="container">
+    <div class="result-search">
+      <h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px">🔍 রেজাল্ট খুঁজুন</h3>
+      <div class="sf">
+        <div class="fg"><label>পরীক্ষার নাম</label><select id="examF"><option value="">সব</option></select></div>
+        <div class="fg"><label>শ্রেণি</label><select id="classF"><option value="">সব</option>
+          <option>৬ষ্ঠ</option><option>৭ম</option><option>৮ম</option><option>৯ম</option>
+          <option>১০ম</option><option>একাদশ</option><option>দ্বাদশ</option></select></div>
+        <div class="fg"><label>রোল নম্বর</label><input type="text" id="rollF" placeholder="রোল"></div>
+        <div class="fg"><label>নাম</label><input type="text" id="nameF" placeholder="নাম লিখুন"></div>
+        <div class="fg" style="align-self:flex-end;display:flex;gap:7px">
+          <button class="btn btn-navy" onclick="searchRes()">🔍 খুঁজুন</button>
+          <button class="btn btn-sm" style="background:#64748b;color:#fff" onclick="clearRes()">↺</button>
+        </div>
+      </div>
+    </div>
+    <div id="resArea"></div>
+  </div></div>
+  <footer class="footer"><div class="container"><div class="footer-bottom">&copy; <span class="yr2"></span> <span class="fn2"></span></div></div></footer>
+</div>
+
+<!-- GALLERY PAGE -->
+<div class="page" id="page-gallery">
+  <div class="page-hero"><div class="container">
+    <div class="breadcrumb"><a onclick="nav('home')">হোম</a><span>›</span><span>গ্যালারি</span></div>
+    <h1>🖼️ ফটো গ্যালারি</h1>
+  </div></div>
+  <div class="sec"><div class="container"><div class="gp-grid" id="fullGallery"></div></div></div>
+  <footer class="footer"><div class="container"><div class="footer-bottom">&copy; <span class="yr2"></span> <span class="fn2"></span></div></div></footer>
+</div>
+
+<!-- HISTORY PAGE -->
+<div class="page" id="page-history">
+  <div class="page-hero"><div class="container">
+    <div class="breadcrumb"><a onclick="nav('home')">হোম</a><span>›</span><span>ইতিহাস</span></div>
+    <h1>🏛 প্রতিষ্ঠানের ইতিহাস</h1>
+  </div></div>
+  <div class="sec"><div class="container" style="max-width:840px">
+    <div class="hbox" style="margin-bottom:20px"><p id="histFull" style="font-size:13px;line-height:2;color:#444"></p></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div class="speech-card"><img class="speech-img" id="presPhotoP" src="" alt="" onerror="this.style.display='none'">
+        <div class="speech-body"><h4 id="presNameP"></h4><div class="role">🏅 সভাপতির বাণী</div><p id="presSpeechP"></p></div></div>
+      <div class="speech-card"><img class="speech-img" id="prinPhotoP" src="" alt="" onerror="this.style.display='none'">
+        <div class="speech-body"><h4 id="prinNameP"></h4><div class="role">🎓 অধ্যক্ষের বাণী</div><p id="prinSpeechP"></p></div></div>
+    </div>
+  </div></div>
+  <footer class="footer"><div class="container"><div class="footer-bottom">&copy; <span class="yr2"></span> <span class="fn2"></span></div></div></footer>
+</div>
+
+<!-- TEACHERS PAGE -->
+<div class="page" id="page-teachers">
+  <div class="page-hero"><div class="container">
+    <div class="breadcrumb"><a onclick="nav('home')">হোম</a><span>›</span><span>শিক্ষক মণ্ডলী</span></div>
+    <h1>👨‍🏫 শিক্ষক মণ্ডলী</h1>
+  </div></div>
+  <div class="sec"><div class="container"><div class="tea-grid" id="teachersGrid"></div></div></div>
+  <footer class="footer"><div class="container"><div class="footer-bottom">&copy; <span class="yr2"></span> <span class="fn2"></span></div></div></footer>
+</div>
+
+<!-- DOWNLOADS PAGE -->
+<div class="page" id="page-downloads">
+  <div class="page-hero"><div class="container">
+    <div class="breadcrumb"><a onclick="nav('home')">হোম</a><span>›</span><span>ডাউনলোড</span></div>
+    <h1>📥 ডাউনলোড কেন্দ্র</h1>
+  </div></div>
+  <div class="sec"><div class="container"><div class="dl-list" id="dlList"></div></div></div>
+  <footer class="footer"><div class="container"><div class="footer-bottom">&copy; <span class="yr2"></span> <span class="fn2"></span></div></div></footer>
+</div>
+
+<!-- LINKS PAGE -->
+<div class="page" id="page-links">
+  <div class="page-hero"><div class="container">
+    <div class="breadcrumb"><a onclick="nav('home')">হোম</a><span>›</span><span>লিংক</span></div>
+    <h1>🔗 গুরুত্বপূর্ণ লিংক</h1>
+  </div></div>
+  <div class="sec"><div class="container"><div class="links-grid" id="linksGrid"></div></div></div>
+  <footer class="footer"><div class="container"><div class="footer-bottom">&copy; <span class="yr2"></span> <span class="fn2"></span></div></div></footer>
+</div>
+
+<!-- ADMISSION PAGE -->
+<div class="page" id="page-admission">
+  <div class="page-hero"><div class="container">
+    <div class="breadcrumb"><a onclick="nav('home')">হোম</a><span>›</span><span>ভর্তি আবেদন</span></div>
+    <h1>📝 অনলাইন ভর্তি আবেদন</h1>
+  </div></div>
+  <div class="sec"><div class="container">
+    <div class="adm-form">
+      <h3 style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:18px">ভর্তি আবেদন ফর্ম ২০২৫</h3>
+      <div class="fr2">
+        <div class="fg"><label>শিক্ষার্থীর নাম (বাংলায়)</label><input id="adm_name_bn" placeholder="পূর্ণ নাম"></div>
+        <div class="fg"><label>শিক্ষার্থীর নাম (ইংরেজি)</label><input id="adm_name_en"></div>
+      </div>
+      <div class="fr2">
+        <div class="fg"><label>পিতার নাম</label><input id="adm_father"></div>
+        <div class="fg"><label>মাতার নাম</label><input id="adm_mother"></div>
+      </div>
+      <div class="fr2">
+        <div class="fg"><label>জন্ম তারিখ</label><input type="date" id="adm_dob"></div>
+        <div class="fg"><label>ভর্তি ইচ্ছুক শ্রেণি</label>
+          <select id="adm_class"><option>৬ষ্ঠ</option><option>৭ম</option><option>৮ম</option><option>৯ম</option><option>১০ম</option><option>একাদশ</option></select>
+        </div>
+      </div>
+      <div class="fr2">
+        <div class="fg"><label>মোবাইল</label><input type="tel" id="adm_phone"></div>
+        <div class="fg"><label>ইমেইল</label><input type="email" id="adm_email"></div>
+      </div>
+      <div class="fg"><label>ঠিকানা</label><textarea rows="2" id="adm_address"></textarea></div>
+      <div class="fg"><label>পূর্ববর্তী বিদ্যালয়</label><input id="adm_prev_school"></div>
+      <button class="btn btn-gold" onclick="submitAdmission()">📨 আবেদন জমা দিন</button>
+      <div id="admMsg" style="margin-top:10px"></div>
+    </div>
+  </div></div>
+  <footer class="footer"><div class="container"><div class="footer-bottom">&copy; <span class="yr2"></span> <span class="fn2"></span></div></div></footer>
+</div>
+
+<!-- CONTACT PAGE -->
+<div class="page" id="page-contact">
+  <div class="page-hero"><div class="container">
+    <div class="breadcrumb"><a onclick="nav('home')">হোম</a><span>›</span><span>যোগাযোগ</span></div>
+    <h1>📞 যোগাযোগ</h1>
+  </div></div>
+  <div class="sec"><div class="container">
+    <div class="contact-grid">
+      <div class="cbox">
+        <h3>📍 যোগাযোগের তথ্য</h3>
+        <div class="info-row"><div class="i-icon">📍</div><div><strong>ঠিকানা</strong><p id="cAddr">—</p></div></div>
+        <div class="info-row"><div class="i-icon">☎</div><div><strong>ফোন</strong><p id="cPhone">—</p></div></div>
+        <div class="info-row"><div class="i-icon">✉</div><div><strong>ইমেইল</strong><p id="cEmail">—</p></div></div>
+        <div class="info-row"><div class="i-icon">⏰</div><div><strong>অফিস সময়</strong><p id="cHours">—</p></div></div>
+        <div class="social-links">
+          <a class="sl sl-fb" id="fbLink" href="#" target="_blank">📘 ফেসবুক</a>
+          <a class="sl sl-yt" id="ytLink" href="#" target="_blank">▶️ ইউটিউব</a>
+          <a class="sl sl-web" id="webLink" href="#" target="_blank">🌐 ওয়েবসাইট</a>
+        </div>
+      </div>
+      <div class="cbox">
+        <h3>🗺️ আমাদের অবস্থান</h3>
+        <div class="map-wrap"><iframe id="mapEmbed" src="" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div></div>
+  <footer class="footer"><div class="container"><div class="footer-bottom">&copy; <span class="yr2"></span> <span class="fn2"></span></div></div></footer>
+</div>
+</div><!-- /publicSite -->
+
+<!-- LIGHTBOX -->
+<div id="lb">
+  <button id="lb-close" onclick="document.getElementById('lb').classList.remove('show')">✕</button>
+  <img id="lbImg" src="" alt="">
+  <p id="lbCap"></p>
+</div>
+
+<!-- EDIT MODAL -->
+<div class="modal-overlay" id="editModal">
+  <div class="modal-box">
+    <h3 id="editModalTitle">সম্পাদনা</h3>
+    <div id="editModalBody"></div>
+    <div class="modal-footer">
+      <button class="btn btn-sm" style="background:#f1f5f9;color:var(--navy)" onclick="closeModal()">বাতিল</button>
+      <button class="btn btn-navy btn-sm" id="editModalSaveBtn" onclick="submitEdit()">💾 সংরক্ষণ</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════ ADMIN SHELL ════ -->
+<div id="adminShell">
+  <div id="loginScreen" class="admin-login-screen">
+    <div class="login-card">
+      <div class="llogo" id="loginLogo">ফা</div>
+      <h2>এডমিন লগইন</h2>
+      <p>পরিবর্তন করতে লগইন করুন</p>
+      <input type="text" id="auUser" placeholder="ইউজারনেম" autocomplete="off">
+      <input type="password" id="auPass" placeholder="পাসওয়ার্ড" onkeydown="if(event.key==='Enter')doLogin()">
+      <div id="loginMsg" style="margin-bottom:8px"></div>
+      <button class="btn btn-navy" onclick="doLogin()" style="width:100%;justify-content:center">লগইন করুন</button>
+      <button class="btn btn-sm" style="width:100%;justify-content:center;background:#f1f5f9;color:var(--navy);margin-top:8px" onclick="closeAdmin()">← ওয়েবসাইটে ফিরুন</button>
+      <p style="font-size:11px;color:var(--muted);margin-top:12px">ডিফল্ট: admin / admin123</p>
+    </div>
+  </div>
+
+  <div id="adminPanel" style="display:none;flex:1;flex-direction:row;overflow:hidden">
+    <div class="adm-sidebar" id="admSidebar">
+      <div class="adm-logo">
+        <div class="lc" id="sidebarLogo">ফা</div>
+        <div><div class="adm-logo-name" id="sidebarName">স্কুল ম্যানেজমেন্ট</div>
+          <div class="adm-logo-sub">Admin Dashboard</div></div>
+      </div>
+      <div class="adm-nav">
+        <div class="adm-nav-section">ওভারভিউ</div>
+        <a onclick="ap('dash')" class="active"><span class="icon">📊</span> ড্যাশবোর্ড</a>
+        <div class="adm-nav-section">কন্টেন্ট</div>
+        <a onclick="ap('notices')"><span class="icon">📢</span> নোটিশ</a>
+        <a onclick="ap('sliders')"><span class="icon">🖼️</span> স্লাইডার</a>
+        <a onclick="ap('gallery')"><span class="icon">📷</span> গ্যালারি</a>
+        <a onclick="ap('teachers')"><span class="icon">👨‍🏫</span> শিক্ষক</a>
+        <a onclick="ap('corners')"><span class="icon">🗂️</span> কর্নার</a>
+        <div class="adm-nav-section">একাডেমিক</div>
+        <a onclick="ap('results')"><span class="icon">📊</span> রেজাল্ট</a>
+        <a onclick="ap('downloads')"><span class="icon">📥</span> ডাউনলোড</a>
+        <a onclick="ap('links')"><span class="icon">🔗</span> লিংক</a>
+        <div class="adm-nav-section">ব্যবস্থাপনা</div>
+        <a onclick="ap('students')"><span class="icon">🧑‍🎓</span> শিক্ষার্থী</a>
+        <a onclick="ap('fees')"><span class="icon">💰</span> বেতন <span class="badge-count" id="feeDueBadge">0</span></a>
+        <a onclick="ap('staff')"><span class="icon">👥</span> স্টাফ</a>
+        <a onclick="ap('salaries')"><span class="icon">💵</span> স্টাফ বেতন <span class="badge-count" id="salDueBadge">0</span></a>
+        <div class="adm-nav-section">সেটিংস</div>
+        <a onclick="ap('settings')"><span class="icon">⚙️</span> সাইট সেটিংস</a>
+        <a onclick="ap('password')"><span class="icon">🔑</span> পাসওয়ার্ড</a>
+      </div>
+      <div class="adm-footer">
+        <a onclick="closeAdmin()">← ওয়েবসাইটে ফিরুন</a>
+        <a onclick="doLogout()">🚪 লগআউট</a>
+      </div>
+    </div>
+
+    <div class="adm-main">
+      <div class="adm-topbar">
+        <button class="adm-sidebar-toggle" onclick="document.getElementById('admSidebar').classList.toggle('open')">☰</button>
+        <div class="adm-topbar-title" id="panelTitle">ড্যাশবোর্ড</div>
+        <div class="adm-user"><div class="av">A</div><span id="adminName">Admin</span></div>
+      </div>
+      <div class="adm-content">
+
+        <!-- DASHBOARD -->
+        <div class="adm-panel active" id="panel-dash">
+          <div class="dash-kpi" id="dashKPI"></div>
+          <div style="background:#fff;border-radius:var(--r);padding:16px;box-shadow:var(--sh);margin-bottom:16px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+              <h3 style="font-size:13px;font-weight:700;color:var(--navy);margin:0">🖼️ হোম পেইজ স্লাইডার ইমেজ (<span id="dashSliderCount">০</span>টি)</h3>
+              <button class="btn btn-navy btn-sm" onclick="ap('sliders')">+ স্লাইড যোগ করুন</button>
+            </div>
+            <div id="dashSliderList" style="display:flex;gap:10px;flex-wrap:wrap"></div>
+          </div>
+          <div class="dash-row">
+            <div class="dash-widget"><h3>📉 বকেয়া বেতন (শিক্ষার্থী)</h3><div id="dashFeesDue"></div></div>
+            <div class="dash-widget"><h3>📉 বকেয়া বেতন (স্টাফ)</h3><div id="dashSalDue"></div></div>
+          </div>
+          <div class="dash-row">
+            <div class="dash-widget"><h3>🏫 শ্রেণিভিত্তিক শিক্ষার্থী</h3><div id="dashClassWise"></div></div>
+            <div class="dash-widget"><h3>👤 সাম্প্রতিক শিক্ষার্থী</h3><div id="dashRecentStudents"></div></div>
+          </div>
+        </div>
+
+        <!-- NOTICES -->
+        <div class="adm-panel" id="panel-notices">
+          <div class="card"><h3>➕ নতুন নোটিশ প্রকাশ করুন</h3>
+            <div class="fg"><label>শিরোনাম *</label><input id="n_title" placeholder="নোটিশের শিরোনাম"></div>
+            <div class="fg-row">
+              <div class="fg"><label>ধরন</label><select id="n_type">
+                <option value="general">সাধারণ</option><option value="exam">পরীক্ষা</option>
+                <option value="holiday">ছুটি</option><option value="urgent">জরুরি</option><option value="job">নিয়োগ</option>
+              </select></div>
+              <div class="fg"><label>সংযুক্তি URL</label><input id="n_attach" placeholder="ফাইল URL (ঐচ্ছিক)"></div>
+            </div>
+            <div class="fg"><label>বিস্তারিত বিবরণ *</label><textarea id="n_content" rows="4"></textarea></div>
+            <button class="btn btn-navy" onclick="addNotice()">📢 প্রকাশ করুন</button>
+            <div id="nMsg" style="margin-top:8px"></div>
+          </div>
+          <div class="card"><h3>📋 প্রকাশিত নোটিশ (<span id="noticeCount">০</span>)</h3>
+            <div class="item-list" id="adminNotices"></div>
+          </div>
+        </div>
+
+        <!-- SLIDERS — ইমেজ URL ভিত্তিক ম্যানেজমেন্ট -->
+        <div class="adm-panel" id="panel-sliders">
+          <div class="card">
+            <h3>🖼️ নতুন স্লাইড যোগ করুন</h3>
+            <div style="background:#f0f7ff;border:1.5px dashed #3b82f6;border-radius:8px;padding:12px;margin-bottom:14px;font-size:12px;color:#1d4ed8">
+              💡 <strong>নির্দেশনা:</strong> ছবির URL যোগ করুন। ছবির URL গুলো সরাসরি ওয়েবসাইটের হোম পেইজে স্লাইডার হিসেবে দেখাবে। Index ফাইল এডিট করার প্রয়োজন নেই।
+            </div>
+            <div class="fg">
+              <label>🌄 ব্যাকগ্রাউন্ড ছবির URL <span style="color:var(--red)">*</span></label>
+              <input id="sl_bg" placeholder="https://images.unsplash.com/photo-xxx?w=1200&auto=format" oninput="updateSliderPreview()">
+            </div>
+            <div id="slBgPreview" style="margin-bottom:12px;display:none">
+              <div id="slBgThumb" style="height:120px;border-radius:8px;background-size:cover;background-position:center;border:2px solid var(--navy);position:relative">
+                <div style="position:absolute;bottom:6px;left:8px;background:rgba(0,0,0,.6);color:#fff;font-size:10px;padding:2px 7px;border-radius:4px">প্রিভিউ</div>
+              </div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>শিরোনাম <span style="color:var(--red)">*</span></label><input id="sl_title" placeholder="স্লাইডের শিরোনাম"></div>
+              <div class="fg"><label>সাবটাইটেল</label><input id="sl_sub" placeholder="সংক্ষিপ্ত বিবরণ"></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>বাটন ১ টেক্সট</label><input id="sl_b1t" placeholder="📢 নোটিশ"></div>
+              <div class="fg"><label>বাটন ১ পেইজ লিংক</label>
+                <select id="sl_b1l">
+                  <option value="">— বেছে নিন —</option>
+                  <option value="home">হোম</option>
+                  <option value="notices">নোটিশ</option>
+                  <option value="results">রেজাল্ট</option>
+                  <option value="gallery">গ্যালারি</option>
+                  <option value="teachers">শিক্ষক</option>
+                  <option value="admission">ভর্তি আবেদন</option>
+                  <option value="downloads">ডাউনলোড</option>
+                  <option value="contact">যোগাযোগ</option>
+                </select>
+              </div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>বাটন ২ টেক্সট (ঐচ্ছিক)</label><input id="sl_b2t" placeholder="📊 রেজাল্ট"></div>
+              <div class="fg"><label>বাটন ২ পেইজ লিংক</label>
+                <select id="sl_b2l">
+                  <option value="">— বেছে নিন —</option>
+                  <option value="home">হোম</option>
+                  <option value="notices">নোটিশ</option>
+                  <option value="results">রেজাল্ট</option>
+                  <option value="gallery">গ্যালারি</option>
+                  <option value="teachers">শিক্ষক</option>
+                  <option value="admission">ভর্তি আবেদন</option>
+                  <option value="downloads">ডাউনলোড</option>
+                  <option value="contact">যোগাযোগ</option>
+                </select>
+              </div>
+            </div>
+            <div class="fg"><label>ক্রম নম্বর (ছোট সংখ্যা আগে দেখাবে)</label><input id="sl_order" type="number" placeholder="1" style="width:120px" min="1"></div>
+            <button class="btn btn-navy" onclick="addSlider()">🖼️ স্লাইড যোগ করুন</button>
+            <div id="slMsg" style="margin-top:8px"></div>
+          </div>
+          <div class="card">
+            <h3>📋 বর্তমান স্লাইড (<span id="sliderCount">০</span>)</h3>
+            <p style="font-size:11px;color:var(--muted);margin-bottom:10px">নিচের স্লাইডগুলো সরাসরি ওয়েবসাইটের হোম পেইজে দেখাচ্ছে। সম্পাদনা বা মুছতে নিচের বাটন ব্যবহার করুন।</p>
+            <div class="slider-admin-grid" id="adminSlidersGrid"></div>
+          </div>
+        </div>
+
+        <!-- GALLERY — গ্রিড ভিত্তিক, edit + delete -->
+        <div class="adm-panel" id="panel-gallery">
+          <div class="card"><h3>📷 নতুন ছবি যোগ করুন</h3>
+            <div class="fg-row">
+              <div class="fg"><label>ছবির URL *</label><input id="g_url" placeholder="https://..." oninput="updateGalleryPreview()"></div>
+              <div class="fg"><label>ক্যাপশন</label><input id="g_cap" placeholder="ছবির বিবরণ"></div>
+            </div>
+            <div id="gPreviewBox" style="margin-bottom:10px;display:none">
+              <img id="gPreviewImg" src="" alt="" style="max-height:100px;border-radius:7px;border:2px solid var(--border)" onerror="this.src='https://placehold.co/200x100/e2e8f0/999?text=Invalid+URL'">
+            </div>
+            <button class="btn btn-navy" onclick="addGallery()">📷 যোগ করুন</button>
+            <div id="gMsg" style="margin-top:8px"></div>
+          </div>
+          <div class="card"><h3>📸 গ্যালারি (<span id="galleryCount">০</span>)</h3>
+            <div class="gal-admin-grid" id="adminGalleryGrid"></div>
+          </div>
+        </div>
+
+        <!-- TEACHERS -->
+        <div class="adm-panel" id="panel-teachers">
+          <div class="card"><h3>👨‍🏫 শিক্ষক যোগ করুন</h3>
+            <div class="fg-row">
+              <div class="fg"><label>নাম *</label><input id="t_name"></div>
+              <div class="fg"><label>পদ</label><input id="t_role" placeholder="সহকারী শিক্ষক"></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>বিভাগ</label><input id="t_dept"></div>
+              <div class="fg"><label>যোগ্যতা</label><input id="t_edu"></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>ছবির URL</label><input id="t_photo"></div>
+              <div class="fg"><label>ফোন</label><input id="t_phone"></div>
+            </div>
+            <button class="btn btn-navy" onclick="addTeacher()">👨‍🏫 যোগ করুন</button>
+            <div id="tMsg" style="margin-top:8px"></div>
+          </div>
+          <div class="card"><h3>📋 শিক্ষক তালিকা (<span id="teacherCount">০</span>)</h3>
+            <div class="item-list" id="adminTeachers"></div>
+          </div>
+        </div>
+
+        <!-- CORNERS -->
+        <div class="adm-panel" id="panel-corners">
+          <div class="card"><h3>🗂️ কর্নার সম্পাদনা</h3>
+            <p style="font-size:12px;color:var(--muted);margin-bottom:14px">প্রতিটি কর্নারের লিংক যোগ বা পরিবর্তন করুন।</p>
+            <div id="cornersEditor"></div>
+            <button class="btn btn-navy" onclick="saveCorners()" style="margin-top:12px">💾 কর্নার সংরক্ষণ</button>
+            <div id="cornerMsg" style="margin-top:8px"></div>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="adm-panel" id="panel-results">
+          <div class="card"><h3>📊 রেজাল্ট এন্ট্রি</h3>
+            <div class="fg-row">
+              <div class="fg"><label>পরীক্ষার নাম *</label><input id="r_exam" placeholder="বার্ষিক পরীক্ষা ২০২৪"></div>
+              <div class="fg"><label>শ্রেণি</label><select id="r_class"><option>৬ষ্ঠ</option><option>৭ম</option><option>৮ম</option><option>৯ম</option><option>১০ম</option><option>একাদশ</option><option>দ্বাদশ</option></select></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>রোল *</label><input id="r_roll"></div>
+              <div class="fg"><label>নাম *</label><input id="r_name"></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>মোট নম্বর</label><input type="number" id="r_total"></div>
+              <div class="fg"><label>গ্রেড</label><select id="r_grade"><option>A+</option><option>A</option><option>A-</option><option>B</option><option>C</option><option>D</option><option>F</option></select></div>
+            </div>
+            <div class="fg"><label>বিষয়ভিত্তিক নম্বর</label><input id="r_subjects" placeholder="বাংলা:৯২, ইংরেজি:৮৮"></div>
+            <div class="fg"><label>মন্তব্য</label><input id="r_remarks"></div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-navy" onclick="addResult()">📊 যোগ করুন</button>
+              <button class="btn btn-sm" style="background:#64748b;color:#fff" onclick="toggleBulk()">📋 CSV বাল্ক</button>
+            </div>
+            <div id="bulkArea" style="display:none;margin-top:12px">
+              <div class="fg"><label>CSV বাল্ক রেজাল্ট</label>
+                <textarea id="r_bulk" rows="5" placeholder="বার্ষিক ২০২৪,১০ম,০০১,মো. রহিম,৪৫০,A+"></textarea></div>
+              <button class="btn btn-navy" onclick="addBulkResult()">📤 বাল্ক আপলোড</button>
+            </div>
+            <div id="rMsg" style="margin-top:8px"></div>
+          </div>
+          <div class="card"><h3>📋 রেজাল্ট তালিকা (<span id="rCount">০</span>)</h3>
+            <div class="item-list" id="adminResults"></div>
+          </div>
+        </div>
+
+        <!-- DOWNLOADS -->
+        <div class="adm-panel" id="panel-downloads">
+          <div class="card"><h3>📥 ডাউনলোড যোগ করুন</h3>
+            <div class="fg-row">
+              <div class="fg"><label>শিরোনাম *</label><input id="d_title"></div>
+              <div class="fg"><label>ফাইল URL *</label><input id="d_url"></div>
+            </div>
+            <div class="fg"><label>ক্যাটাগরি</label><input id="d_category" placeholder="সিলেবাস / ফর্ম / রুটিন"></div>
+            <button class="btn btn-navy" onclick="addDownload()">✅ যোগ করুন</button>
+            <div id="dMsg" style="margin-top:8px"></div>
+          </div>
+          <div class="card"><h3>📋 ডাউনলোড তালিকা</h3>
+            <div class="item-list" id="adminDownloads"></div>
+          </div>
+        </div>
+
+        <!-- LINKS -->
+        <div class="adm-panel" id="panel-links">
+          <div class="card"><h3>🔗 লিংক যোগ করুন</h3>
+            <div class="fg-row">
+              <div class="fg"><label>নাম *</label><input id="l_title"></div>
+              <div class="fg"><label>URL *</label><input id="l_url" placeholder="https://..."></div>
+            </div>
+            <div class="fg"><label>আইকন (ইমোজি)</label><input id="l_icon" placeholder="🏛" style="width:80px"></div>
+            <button class="btn btn-navy" onclick="addLink()">✅ যোগ করুন</button>
+            <div id="lMsg" style="margin-top:8px"></div>
+          </div>
+          <div class="card"><h3>📋 লিংক তালিকা</h3>
+            <div class="item-list" id="adminLinks"></div>
+          </div>
+        </div>
+
+        <!-- STUDENTS -->
+        <div class="adm-panel" id="panel-students">
+          <div class="card"><h3>🧑‍🎓 নতুন শিক্ষার্থী</h3>
+            <div class="fg-row">
+              <div class="fg"><label>নাম *</label><input id="stu_name"></div>
+              <div class="fg"><label>রোল নম্বর</label><input id="stu_roll"></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>শ্রেণি</label><select id="stu_class"><option>৬ষ্ঠ</option><option>৭ম</option><option>৮ম</option><option>৯ম</option><option>১০ম</option><option>একাদশ</option><option>দ্বাদশ</option></select></div>
+              <div class="fg"><label>সেকশন</label><input id="stu_section" placeholder="ক/খ/গ"></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>পিতার নাম</label><input id="stu_father"></div>
+              <div class="fg"><label>মাতার নাম</label><input id="stu_mother"></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>ফোন</label><input id="stu_phone"></div>
+              <div class="fg"><label>মাসিক ফি (৳)</label><input id="stu_fee" type="number" placeholder="500"></div>
+            </div>
+            <div class="fg"><label>ঠিকানা</label><input id="stu_address"></div>
+            <button class="btn btn-navy" onclick="addStudent()">✅ যোগ করুন</button>
+            <div id="stuMsg" style="margin-top:8px"></div>
+          </div>
+          <div class="card"><h3>📋 শিক্ষার্থী তালিকা (<span id="stuCount">০</span>)</h3>
+            <div style="margin-bottom:10px">
+              <input id="stuSearch" placeholder="🔍 নাম/রোল খুঁজুন..." style="padding:7px 11px;border:1.5px solid var(--border);border-radius:8px;font-size:12px;width:100%;font-family:inherit" oninput="filterStudents(this.value)">
+            </div>
+            <div class="tbl-wrap"><table class="ftable">
+              <thead><tr><th>নাম</th><th>রোল</th><th>শ্রেণি</th><th>পিতা</th><th>ফোন</th><th>মাসিক ফি</th><th>অ্যাকশন</th></tr></thead>
+              <tbody id="stuBody"></tbody>
+            </table></div>
+          </div>
+        </div>
+
+        <!-- FEES -->
+        <div class="adm-panel" id="panel-fees">
+          <div class="card"><h3>💰 বেতন এন্ট্রি</h3>
+            <div class="fg-row">
+              <div class="fg"><label>শিক্ষার্থী</label><select id="fee_stu"><option value="">— বেছে নিন —</option></select></div>
+              <div class="fg"><label>মাস</label><input id="fee_month" placeholder="জানুয়ারি ২০২৫"></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>মোট বেতন (৳)</label><input id="fee_amt" type="number"></div>
+              <div class="fg"><label>পরিশোধিত (৳)</label><input id="fee_paid" type="number" placeholder="0"></div>
+            </div>
+            <div class="fg"><label>অবস্থা</label><select id="fee_status">
+              <option value="due">বকেয়া</option><option value="paid">পরিশোধিত</option><option value="partial">আংশিক</option></select></div>
+            <button class="btn btn-navy" onclick="addFee()">💰 এন্ট্রি করুন</button>
+            <div id="feeMsg" style="margin-top:8px"></div>
+          </div>
+          <div class="card"><h3>📋 বেতন রেকর্ড</h3>
+            <div class="tbl-wrap"><table class="ftable">
+              <thead><tr><th>নাম</th><th>শ্রেণি</th><th>মাস</th><th>মোট</th><th>পরিশোধ</th><th>বকেয়া</th><th>অবস্থা</th><th>অ্যাকশন</th></tr></thead>
+              <tbody id="feeBody"></tbody>
+            </table></div>
+          </div>
+        </div>
+
+        <!-- STAFF -->
+        <div class="adm-panel" id="panel-staff">
+          <div class="card"><h3>👥 নতুন স্টাফ</h3>
+            <div class="fg-row">
+              <div class="fg"><label>নাম *</label><input id="sf_name"></div>
+              <div class="fg"><label>পদ</label><input id="sf_role" placeholder="অধ্যক্ষ / স্টাফ"></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>বিভাগ</label><input id="sf_dept"></div>
+              <div class="fg"><label>ফোন</label><input id="sf_phone"></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>মাসিক বেতন (৳)</label><input id="sf_salary" type="number"></div>
+              <div class="fg"><label>যোগদানের তারিখ</label><input id="sf_join" type="date"></div>
+            </div>
+            <button class="btn btn-navy" onclick="addStaff()">✅ যোগ করুন</button>
+            <div id="sfMsg" style="margin-top:8px"></div>
+          </div>
+          <div class="card"><h3>📋 স্টাফ তালিকা</h3>
+            <div class="tbl-wrap"><table class="ftable">
+              <thead><tr><th>নাম</th><th>পদ</th><th>বিভাগ</th><th>ফোন</th><th>মাসিক বেতন</th><th>অ্যাকশন</th></tr></thead>
+              <tbody id="sfBody"></tbody>
+            </table></div>
+          </div>
+        </div>
+
+        <!-- SALARIES -->
+        <div class="adm-panel" id="panel-salaries">
+          <div class="card"><h3>💵 বেতন প্রদান এন্ট্রি</h3>
+            <div class="fg-row">
+              <div class="fg"><label>স্টাফ</label><select id="sal_staff"><option value="">— বেছে নিন —</option></select></div>
+              <div class="fg"><label>মাস</label><input id="sal_month" placeholder="ডিসেম্বর ২০২৪"></div>
+            </div>
+            <div class="fg-row">
+              <div class="fg"><label>বেতন (৳)</label><input id="sal_amt" type="number"></div>
+              <div class="fg"><label>অবস্থা</label><select id="sal_status">
+                <option value="due">বকেয়া</option><option value="paid">পরিশোধিত</option></select></div>
+            </div>
+            <button class="btn btn-navy" onclick="addSalary()">💵 এন্ট্রি করুন</button>
+            <div id="salMsg" style="margin-top:8px"></div>
+          </div>
+          <div class="card"><h3>📋 বেতন রেকর্ড</h3>
+            <div class="tbl-wrap"><table class="ftable">
+              <thead><tr><th>নাম</th><th>পদ</th><th>মাস</th><th>বেতন</th><th>বকেয়া</th><th>অবস্থা</th><th>অ্যাকশন</th></tr></thead>
+              <tbody id="salBody"></tbody>
+            </table></div>
+          </div>
+        </div>
+
+        <!-- SETTINGS -->
+        <div class="adm-panel" id="panel-settings">
+          <div class="stabs">
+            <div class="stab active" onclick="stab('s-general')">🏫 সাধারণ</div>
+            <div class="stab" onclick="stab('s-logo')">🖼️ লোগো</div>
+            <div class="stab" onclick="stab('s-footer')">📋 ফুটার</div>
+            <div class="stab" onclick="stab('s-contact')">📞 যোগাযোগ</div>
+            <div class="stab" onclick="stab('s-social')">🌐 সোশ্যাল</div>
+            <div class="stab" onclick="stab('s-stats')">📊 পরিসংখ্যান</div>
+            <div class="stab" onclick="stab('s-speech')">🗣️ বাণী</div>
+          </div>
+          <div class="stab-panel show" id="s-general">
+            <div class="card"><h3>🏫 প্রতিষ্ঠান তথ্য</h3>
+              <div class="fg-row">
+                <div class="fg"><label>বিদ্যালয়ের নাম</label><input id="s_school_name"></div>
+                <div class="fg"><label>স্লোগান</label><input id="s_slogan"></div>
+              </div>
+              <div class="fg"><label>জরুরি ঘোষণা</label><textarea id="s_urgent_notice" rows="2"></textarea></div>
+              <div class="fg"><label>টপবার মার্কি টেক্সট</label><textarea id="s_topbar_text" rows="2"></textarea></div>
+              <div class="fg"><label>প্রতিষ্ঠানের ইতিহাস</label><textarea id="s_history" rows="5"></textarea></div>
+              <div class="fg"><label>লক্ষ্য ও উদ্দেশ্য</label><textarea id="s_mission" rows="3"></textarea></div>
+              <button class="btn btn-navy" onclick="saveSettings()">💾 সংরক্ষণ করুন</button>
+              <div id="sMsg-general" style="margin-top:8px"></div>
+            </div>
+          </div>
+          <div class="stab-panel" id="s-logo">
+            <div class="card"><h3>🖼️ লোগো ও হেডার</h3>
+              <div class="fg-row">
+                <div class="fg"><label>লোগো টেক্সট</label><input id="s_logo_text" maxlength="3" placeholder="ফা"></div>
+                <div class="fg"><label>লোগো ইমেজ URL</label><input id="s_logo_url" placeholder="https://..."></div>
+              </div>
+              <div class="fg-row">
+                <div class="fg"><label>হেডার ব্যাকগ্রাউন্ড রঙ</label>
+                  <div style="display:flex;gap:8px;align-items:center">
+                    <input id="s_header_bg" type="color" value="#0a2240" style="width:44px;height:34px;padding:2px;border:1.5px solid var(--border);border-radius:6px;cursor:pointer" oninput="document.getElementById('s_header_bg_txt').value=this.value">
+                    <input id="s_header_bg_txt" value="#0a2240" style="flex:1;padding:8px;border:1.5px solid var(--border);border-radius:8px;font-size:12px" oninput="document.getElementById('s_header_bg').value=this.value">
+                  </div>
+                </div>
+                <div class="fg"><label>নেভবার রঙ</label>
+                  <div style="display:flex;gap:8px;align-items:center">
+                    <input id="s_nav_bg" type="color" value="#1a3a5c" style="width:44px;height:34px;padding:2px;border:1.5px solid var(--border);border-radius:6px;cursor:pointer" oninput="document.getElementById('s_nav_bg_txt').value=this.value">
+                    <input id="s_nav_bg_txt" value="#1a3a5c" style="flex:1;padding:8px;border:1.5px solid var(--border);border-radius:8px;font-size:12px" oninput="document.getElementById('s_nav_bg').value=this.value">
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-navy" onclick="saveSettings()">💾 সংরক্ষণ করুন</button>
+              <div id="sMsg-logo" style="margin-top:8px"></div>
+            </div>
+          </div>
+          <div class="stab-panel" id="s-footer">
+            <div class="card"><h3>📋 ফুটার</h3>
+              <div class="fg"><label>ফুটার পরিচিতি টেক্সট</label><textarea id="s_footer_about" rows="3"></textarea></div>
+              <div class="fg-row">
+                <div class="fg"><label>কপিরাইট টেক্সট</label><input id="s_footer_copyright" placeholder="সর্বস্বত্ব সংরক্ষিত"></div>
+                <div class="fg"><label>ফুটার ব্যাকগ্রাউন্ড রঙ</label>
+                  <div style="display:flex;gap:8px;align-items:center">
+                    <input id="s_footer_bg" type="color" value="#0a2240" style="width:44px;height:34px;padding:2px;border:1.5px solid var(--border);border-radius:6px;cursor:pointer" oninput="document.getElementById('s_footer_bg_txt').value=this.value">
+                    <input id="s_footer_bg_txt" value="#0a2240" style="flex:1;padding:8px;border:1.5px solid var(--border);border-radius:8px;font-size:12px" oninput="document.getElementById('s_footer_bg').value=this.value">
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-navy" onclick="saveSettings()">💾 সংরক্ষণ করুন</button>
+              <div id="sMsg-footer" style="margin-top:8px"></div>
+            </div>
+          </div>
+          <div class="stab-panel" id="s-contact">
+            <div class="card"><h3>📞 যোগাযোগ তথ্য</h3>
+              <div class="fg-row">
+                <div class="fg"><label>ফোন নম্বর</label><input id="s_phone"></div>
+                <div class="fg"><label>ইমেইল</label><input id="s_email"></div>
+              </div>
+              <div class="fg"><label>ঠিকানা</label><input id="s_address"></div>
+              <div class="fg"><label>অফিস সময়</label><input id="s_office_hours"></div>
+              <div class="fg"><label>Google Map Embed URL</label><textarea id="s_map_embed" rows="3"></textarea></div>
+              <button class="btn btn-navy" onclick="saveSettings()">💾 সংরক্ষণ করুন</button>
+              <div id="sMsg-contact" style="margin-top:8px"></div>
+            </div>
+          </div>
+          <div class="stab-panel" id="s-social">
+            <div class="card"><h3>🌐 সোশ্যাল মিডিয়া</h3>
+              <div class="fg"><label>ফেসবুক পেইজ URL</label><input id="s_facebook_url" placeholder="https://facebook.com/..."></div>
+              <div class="fg"><label>ইউটিউব চ্যানেল URL</label><input id="s_youtube_url" placeholder="https://youtube.com/..."></div>
+              <div class="fg"><label>ওয়েবসাইট URL</label><input id="s_website_link" placeholder="https://..."></div>
+              <button class="btn btn-navy" onclick="saveSettings()">💾 সংরক্ষণ করুন</button>
+              <div id="sMsg-social" style="margin-top:8px"></div>
+            </div>
+          </div>
+          <div class="stab-panel" id="s-stats">
+            <div class="card"><h3>📊 পরিসংখ্যান বার</h3>
+              <div class="fg-row">
+                <div class="fg"><label>মোট শিক্ষার্থী</label><input id="s_stat_students" placeholder="১৫০০+"></div>
+                <div class="fg"><label>মোট শিক্ষক</label><input id="s_stat_teachers" placeholder="৪৫+"></div>
+              </div>
+              <div class="fg-row">
+                <div class="fg"><label>পাশের হার</label><input id="s_stat_pass" placeholder="৯৮%"></div>
+                <div class="fg"><label>বছরের ঐতিহ্য</label><input id="s_stat_years" placeholder="৩০+"></div>
+              </div>
+              <div class="fg"><label>শ্রেণি সংখ্যা</label><input id="s_stat_classes" placeholder="১২"></div>
+              <button class="btn btn-navy" onclick="saveSettings()">💾 সংরক্ষণ করুন</button>
+              <div id="sMsg-stats" style="margin-top:8px"></div>
+            </div>
+          </div>
+          <div class="stab-panel" id="s-speech">
+            <div class="card"><h3>👑 সভাপতির তথ্য</h3>
+              <div class="fg-row">
+                <div class="fg"><label>নাম</label><input id="s_president_name"></div>
+                <div class="fg"><label>ছবির URL</label><input id="s_president_photo"></div>
+              </div>
+              <div class="fg"><label>বাণী</label><textarea id="s_president_speech" rows="3"></textarea></div>
+            </div>
+            <div class="card"><h3>🎓 অধ্যক্ষের তথ্য</h3>
+              <div class="fg-row">
+                <div class="fg"><label>নাম</label><input id="s_principal_name"></div>
+                <div class="fg"><label>ছবির URL</label><input id="s_principal_photo"></div>
+              </div>
+              <div class="fg"><label>বাণী</label><textarea id="s_principal_speech" rows="3"></textarea></div>
+              <button class="btn btn-navy" onclick="saveSettings()">💾 সংরক্ষণ করুন</button>
+              <div id="sMsg-speech" style="margin-top:8px"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="adm-panel" id="panel-password">
+          <div class="card" style="max-width:380px"><h3>🔑 পাসওয়ার্ড পরিবর্তন</h3>
+            <div class="fg"><label>বর্তমান পাসওয়ার্ড</label><input type="password" id="pw_old"></div>
+            <div class="fg"><label>নতুন পাসওয়ার্ড</label><input type="password" id="pw_new"></div>
+            <div class="fg"><label>নিশ্চিত করুন</label><input type="password" id="pw_confirm"></div>
+            <button class="btn btn-navy" onclick="changePassword()">🔑 পরিবর্তন করুন</button>
+            <div id="pwMsg" style="margin-top:8px"></div>
+          </div>
+        </div>
+
+      </div><!-- /adm-content -->
+    </div><!-- /adm-main -->
+  </div><!-- /adminPanel -->
+</div><!-- /adminShell -->
+
+<script>
+const API_URL = 'https://script.google.com/macros/s/AKfycbwXIwO_EIoPApAGxK-uP56JV3uv7u7ornjO_cfFufjNylNL_4Mk7eZv7inrd5A7TFL_/exec'; // ← এখানে আপনার GAS Deploy URL দিন
+
+/* ══ STATE ══ */
+let S={};
+let DB={notices:[],results:[],gallery:[],downloads:[],links:[],teachers:[],corners:[],sliders:[],students:[],fees:[],staff:[],salaries:[]};
+let tok=''; try{tok=localStorage.getItem('adminToken')||'';}catch(e){}
+let allResults=[], slideIdx=0, slideTimer;
+let noticeFilter='';
+let editState={type:'',id:'',idx:-1};
+
+/* ══ UTILS ══ */
+const $=id=>document.getElementById(id);
+function esc(v){if(v==null)return '';return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');}
+function txt(id,v){const e=$(id);if(e)e.textContent=(v!=null)?String(v):'';}
+function val(id,v){const e=$(id);if(e)e.value=(v!=null)?String(v):'';}
+function src(id,v){const e=$(id);if(e&&v)e.src=String(v);}
+function href(id,v){const e=$(id);if(e)e.href=v||'#';}
+function today(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
+function numFmt(n){return Number(n).toLocaleString('bn-BD');}
+function noData(){return '<div style="text-align:center;padding:18px;color:var(--muted);font-size:12px">কোনো তথ্য নেই</div>';}
+
+/* ══ API ══ */
+async function api(action,payload={}){
+  try{
+    const r=await fetch(API_URL,{method:'POST',body:JSON.stringify({action,payload,token:tok})});
+    const t=await r.text();
+    if(!t||t.trim()[0]==='<'){console.error('Non-JSON:',t.substring(0,200));return{ok:false,error:'API সংযোগ ত্রুটি। index.html এ API_URL সঠিকভাবে দিন এবং GAS Redeploy করুন।'};}
+    return JSON.parse(t);
+  }catch(e){return{ok:false,error:e.toString()};}
+}
+
+/* ══ INIT ══ */
+async function init(){
+  const sr=await api('getSettings');
+  if(sr.ok&&sr.data) S=sr.data;
+  applySettings();
+  const [nr,rr,gr,dr,lr,tr,cr,slr]=await Promise.all([
+    api('getNotices'),api('getResults'),api('getGallery'),
+    api('getDownloads'),api('getLinks'),api('getTeachers'),
+    api('getCorners'),api('getSliders')
+  ]);
+  if(nr.ok&&nr.data) DB.notices=nr.data;
+  if(rr.ok&&rr.data){DB.results=rr.data;allResults=[...rr.data];}
+  if(gr.ok&&gr.data) DB.gallery=gr.data;
+  if(dr.ok&&dr.data) DB.downloads=dr.data;
+  if(lr.ok&&lr.data) DB.links=lr.data;
+  if(tr.ok&&tr.data) DB.teachers=tr.data;
+  if(cr.ok&&cr.data) DB.corners=cr.data;
+  if(slr.ok&&slr.data) DB.sliders=slr.data;
+  renderAll();
+}
+
+/* ══ SETTINGS ══ */
+function applySettings(){
+  document.title=S.school_name||'স্কুল ওয়েবসাইট';
+  txt('siteName',S.school_name); txt('siteSlogan',S.slogan);
+  txt('topMarquee','📢 '+(S.topbar_text||S.urgent_notice||''));
+  txt('topPhone','☎ '+(S.phone||''));
+  txt('urgentText',S.urgent_notice);
+  txt('hPhone',S.phone); txt('hEmail',S.email);
+  txt('historyHome',(S.history||'').substring(0,200)+((S.history||'').length>200?'...':''));
+  txt('histFull',S.history); txt('missionHome',S.mission);
+  txt('presName',S.president_name); txt('presSpeech',S.president_speech);
+  txt('presNameP',S.president_name); txt('presSpeechP',S.president_speech);
+  txt('prinName',S.principal_name); txt('prinSpeech',S.principal_speech);
+  txt('prinNameP',S.principal_name); txt('prinSpeechP',S.principal_speech);
+  if(S.president_photo){src('presPhoto',S.president_photo);src('presPhotoP',S.president_photo);}
+  if(S.principal_photo){src('prinPhoto',S.principal_photo);src('prinPhotoP',S.principal_photo);}
+  txt('st1',S.stat_students); txt('st2',S.stat_teachers);
+  txt('st3',S.stat_pass); txt('st4',S.stat_years); txt('st5',S.stat_classes);
+  txt('cAddr',S.address); txt('cPhone',S.phone); txt('cEmail',S.email); txt('cHours',S.office_hours);
+  href('fbLink',S.facebook_url); href('ytLink',S.youtube_url); href('webLink',S.website_link);
+  const me=$('mapEmbed'); if(me&&S.map_embed) me.src=S.map_embed;
+  // Logo
+  const ld=$('logoDisplay');
+  if(ld){
+    if(S.logo_url) ld.innerHTML=`<img class="logo-img" src="${esc(S.logo_url)}" alt="লোগো">`;
+    else ld.innerHTML=`<div class="logo-circle" style="background:var(--gold)">${esc(S.logo_text||'ফা')}</div>`;
+  }
+  if(S.header_bg) $('hdrTop').style.background=S.header_bg;
+  if(S.nav_bg) $('navWrap').style.background=S.nav_bg;
+  if(S.footer_bg) document.querySelectorAll('.footer').forEach(f=>f.style.background=S.footer_bg);
+  const yr=new Date().getFullYear();
+  document.querySelectorAll('#yr,.yr2').forEach(e=>e.textContent=yr);
+  document.querySelectorAll('#footerName,.fn2').forEach(e=>e.textContent=S.school_name||'');
+  txt('footerCopy',S.footer_copyright||'সর্বস্বত্ব সংরক্ষিত');
+  renderFooter();
+}
+
+function renderFooter(){
+  const el=$('footerGrid'); if(!el)return;
+  el.innerHTML=`
+    <div class="fc"><h4>🏫 বিদ্যালয়</h4><p>${esc(S.footer_about||S.school_name||'')}</p></div>
+    <div class="fc"><h4>🔗 দ্রুত লিংক</h4>
+      <a onclick="nav('home')">হোম</a><a onclick="nav('notices')">নোটিশ বোর্ড</a>
+      <a onclick="nav('results')">রেজাল্ট</a><a onclick="nav('gallery')">গ্যালারি</a>
+      <a onclick="nav('downloads')">ডাউনলোড</a><a onclick="nav('contact')">যোগাযোগ</a></div>
+    <div class="fc"><h4>📚 একাডেমিক</h4>
+      <a onclick="nav('admission')">অনলাইন ভর্তি</a>
+      <a onclick="nav('teachers')">শিক্ষক মণ্ডলী</a>
+      <a onclick="nav('links')">গুরুত্বপূর্ণ লিংক</a></div>
+    <div class="fc"><h4>📞 যোগাযোগ</h4>
+      <p>${esc(S.address||'')}</p>
+      <p style="margin-top:6px">📞 ${esc(S.phone||'')}</p>
+      <p>✉ ${esc(S.email||'')}</p></div>`;
+}
+
+/* ══ HERO ══ */
+function renderHero(){
+  const sEl=$('heroSlides'), dEl=$('heroDots'); if(!sEl)return;
+  clearInterval(slideTimer);
+  if(!DB.sliders.length){
+    sEl.innerHTML=`<div class="hero-slide active" style="background:var(--navy2)">
+      <div class="hero-content">
+        <h2>${esc(S.school_name||'ফাকল পুলিশ লাইন্স স্কুল অ্যান্ড কলেজ')}</h2>
+        <p>${esc(S.slogan||'শিক্ষা, দক্ষতা ও নৈতিকতার সমন্বয়ে')}</p>
+        <div class="hero-btns">
+          <button class="btn btn-gold" onclick="nav('notices')">📢 নোটিশ</button>
+          <button class="btn btn-outline" onclick="nav('results')">📊 রেজাল্ট</button>
+        </div>
+      </div>
+    </div>`;
+    if(dEl) dEl.innerHTML='';
+    return;
+  }
+  const slides=[...DB.sliders].sort((a,b)=>Number(a.order||99)-Number(b.order||99));
+  slideIdx=0;
+  sEl.innerHTML=slides.map((s,i)=>`
+    <div class="hero-slide ${i===0?'active':''}" style="background-image:url('${esc(s.bg||s.bgUrl||'')}')">
+      <div class="hero-content">
+        <h2>${esc(s.title||'')}</h2>
+        <p>${esc(s.subtitle||s.sub||'')}</p>
+        <div class="hero-btns">
+          ${s.btn1Text?`<button class="btn btn-gold" onclick="nav('${esc(s.btn1Link||'home')}')">${esc(s.btn1Text)}</button>`:''}
+          ${s.btn2Text?`<button class="btn btn-outline" onclick="nav('${esc(s.btn2Link||'home')}')">${esc(s.btn2Text)}</button>`:''}
+        </div>
+      </div>
+    </div>`).join('');
+  if(dEl) dEl.innerHTML=slides.map((_,i)=>`<div class="hdot ${i===0?'active':''}" onclick="goSlide(${i})"></div>`).join('');
+  slideTimer=setInterval(()=>chSlide(1),5000);
+}
+
+function goSlide(n){
+  const slides=document.querySelectorAll('.hero-slide');
+  const dots=document.querySelectorAll('.hdot');
+  if(!slides.length)return;
+  slides[slideIdx].classList.remove('active');
+  if(dots[slideIdx])dots[slideIdx].classList.remove('active');
+  slideIdx=(n+slides.length)%slides.length;
+  slides[slideIdx].classList.add('active');
+  if(dots[slideIdx])dots[slideIdx].classList.add('active');
+}
+function chSlide(d){goSlide(slideIdx+d);}
+
+/* ══ RENDER ALL PUBLIC ══ */
+function renderAll(){
+  renderHero();
+  renderHomeNotices(); renderHomeResults(); renderHomeGallery();
+  renderCorners(); renderTeachers(); renderGalleryPage();
+  renderDownloads(); renderLinks(); updateExamFilter(); searchRes();
+}
+
+function bColor(t){return t==='urgent'?'red':t==='exam'?'blue':t==='job'?'gold':'green';}
+
+/* NOTICES PUBLIC */
+function renderHomeNotices(){
+  const el=$('homeNotices'); if(!el)return;
+  el.innerHTML=DB.notices.slice(0,4).map((n,idx)=>`
+    <div class="nb-item" onclick="openNoticeDetail(${idx})">
+      <h4>${esc(n.title||'(শিরোনাম নেই)')}</h4>
+      <div class="nb-meta">📅 ${esc(n.date||'')} <span class="badge b-${bColor(n.type)}">${esc(n.badge||n.type||'নোটিশ')}</span></div>
+    </div>`).join('')||'<div style="padding:14px;text-align:center;color:var(--muted);font-size:12px">কোনো নোটিশ নেই</div>';
+}
+
+function renderNoticesPage(){
+  const el=$('noticeFullList'); if(!el)return;
+  const list=noticeFilter?DB.notices.filter(n=>n.type===noticeFilter):DB.notices;
+  el.innerHTML=list.map((n,i)=>{
+    const realIdx=DB.notices.indexOf(n);
+    const preview=(n.content||'').substring(0,120)+(n.content&&n.content.length>120?'...':'');
+    return `<div style="background:#fff;border-radius:var(--r);padding:16px 20px;box-shadow:var(--sh);border-left:4px solid var(--gold);cursor:pointer;transition:.2s" onmouseover="this.style.transform='translateX(3px)'" onmouseout="this.style.transform=''" onclick="openNoticeDetail(${realIdx})">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:7px;flex-wrap:wrap">
+        <h3 style="font-size:14px;font-weight:700;color:var(--navy)">${esc(n.title||'(শিরোনাম নেই)')}</h3>
+        <span class="badge b-${bColor(n.type)}">${esc(n.badge||n.type||'নোটিশ')}</span>
+      </div>
+      <p style="font-size:12px;color:#555;margin-top:5px;line-height:1.7">${esc(preview)}</p>
+      <div style="margin-top:7px;font-size:11px;color:var(--muted)">📅 ${esc(n.date||'')} &nbsp;👉 বিস্তারিত পড়ুন</div>
+    </div>`;
+  }).join('')||'<div style="text-align:center;padding:48px;color:var(--muted)">কোনো নোটিশ নেই</div>';
+  showNL();
+}
+
+function filterNotices(type){noticeFilter=type;renderNoticesPage();}
+
+function openNoticeDetail(idx){
+  const n=DB.notices[idx]; if(!n)return;
+  nav('notices');
+  $('noticeDetailContent').innerHTML=`
+    <div style="margin-bottom:12px"><span class="badge b-${bColor(n.type)}">${esc(n.badge||n.type||'নোটিশ')}</span></div>
+    <h2 style="font-family:'Noto Serif Bengali',serif;font-size:20px;color:var(--navy);margin-bottom:10px">${esc(n.title||'')}</h2>
+    <div style="font-size:11px;color:var(--muted);margin:9px 0 16px">📅 ${esc(n.date||'')}</div>
+    <div class="nd-body">${esc(n.content||'')}</div>
+    ${n.attach?`<div style="margin-top:16px;padding:11px;background:var(--light);border-radius:7px">📎 <a href="${esc(n.attach)}" target="_blank" style="color:var(--navy2);font-weight:700">সংযুক্তি ডাউনলোড করুন</a></div>`:''}`;
+  $('noticeListSec').style.display='none';
+  $('noticeDetailSec').style.display='block';
+  window.scrollTo(0,0);
+}
+function showNL(){$('noticeListSec').style.display='block';$('noticeDetailSec').style.display='none';}
+
+/* RESULTS PUBLIC */
+function renderHomeResults(){
+  const el=$('homeResults'); if(!el)return;
+  const exams=[...new Set(allResults.map(r=>r.exam))];
+  el.innerHTML=exams.slice(0,4).map(ex=>`
+    <div class="nb-item" onclick="nav('results')">
+      <h4>${esc(ex)}</h4>
+      <div class="nb-meta">👤 ${allResults.filter(r=>r.exam===ex).length} জন <span class="badge b-green">রেজাল্ট</span></div>
+    </div>`).join('')||'<div style="padding:14px;text-align:center;color:var(--muted);font-size:12px">কোনো রেজাল্ট নেই</div>';
+}
+
+function updateExamFilter(){
+  const sel=$('examF'); if(!sel)return;
+  const exams=[...new Set(allResults.map(r=>r.exam))];
+  sel.innerHTML='<option value="">সব</option>'+exams.map(e=>`<option>${esc(e)}</option>`).join('');
+}
+
+function searchRes(){
+  const exam=$('examF')?.value||'', cls=$('classF')?.value||'';
+  const roll=$('rollF')?.value.trim()||'', name=$('nameF')?.value.trim()||'';
+  let data=allResults.slice();
+  if(exam) data=data.filter(r=>r.exam===exam);
+  if(cls)  data=data.filter(r=>(r.class||r.cls||'')===cls);
+  if(roll) data=data.filter(r=>String(r.roll||'').includes(roll));
+  if(name) data=data.filter(r=>(r.name||'').includes(name));
+  const el=$('resArea'); if(!el)return;
+  if(!data.length){el.innerHTML='<div class="no-res"><span>📭</span><h3>কোনো রেজাল্ট নেই</h3></div>';return;}
+  const gc=g=>g==='A+'?'gAp':g==='A'||g==='A-'?'gA':g==='B'||g==='C'?'gB':g==='F'?'gF':'gC';
+  el.innerHTML=`<div class="res-wrap">
+    <div style="background:var(--navy2);color:#fff;padding:10px 16px;font-size:12px;font-weight:700">${data.length} জনের রেজাল্ট</div>
+    <div style="overflow-x:auto"><table><thead><tr>
+      <th>#</th><th>পরীক্ষার নাম</th><th>শ্রেণি</th><th>রোল</th><th>নাম</th><th>নম্বর</th><th>গ্রেড</th><th>মন্তব্য</th>
+    </tr></thead><tbody>${data.map((r,i)=>`<tr>
+      <td>${i+1}</td><td>${esc(r.exam||'')}</td><td>${esc(r.class||'')}</td><td>${esc(r.roll||'')}</td>
+      <td><strong>${esc(r.name||'')}</strong></td><td>${esc(r.total||'')}</td>
+      <td><span class="grd ${gc(r.grade||'')}">${esc(r.grade||'')}</span></td>
+      <td style="font-size:11px;color:var(--muted)">${esc(r.remarks||'')}</td>
+    </tr>`).join('')}</tbody></table></div></div>`;
+}
+function clearRes(){['examF','classF','rollF','nameF'].forEach(id=>{const e=$(id);if(e)e.value='';});searchRes();}
+
+/* GALLERY PUBLIC */
+function renderHomeGallery(){
+  const el=$('homeGallery'); if(!el)return;
+  el.innerHTML=DB.gallery.slice(0,8).map((g,idx)=>`
+    <div class="g-item" onclick="lbShow(${idx})">
+      <img src="${esc(g.url||'')}" alt="${esc(g.caption||'')}" loading="lazy" onerror="this.src='https://placehold.co/300x200/ccc/999?text=No+Image'">
+      <div class="g-cap">${esc(g.caption||'')}</div>
+    </div>`).join('');
+}
+function renderGalleryPage(){
+  const el=$('fullGallery'); if(!el)return;
+  el.innerHTML=DB.gallery.map((g,idx)=>`
+    <div class="gp-item" onclick="lbShow(${idx})">
+      <img src="${esc(g.url||'')}" alt="${esc(g.caption||'')}" loading="lazy" onerror="this.src='https://placehold.co/400x300/ccc/999?text=No+Image'">
+      <div class="gp-cap">${esc(g.caption||'')}</div>
+    </div>`).join('')||'<div style="text-align:center;padding:48px;color:#aec8e0">কোনো ছবি নেই</div>';
+}
+
+/* LIGHTBOX — index based, 100% reliable */
+function lbShow(idx){
+  const g=DB.gallery[idx]; if(!g)return;
+  $('lbImg').src=g.url||'';
+  $('lbCap').textContent=g.caption||'';
+  $('lb').classList.add('show');
+}
+$('lb').addEventListener('click',function(e){if(e.target===this||e.target.id==='lbCap')this.classList.remove('show');});
+
+/* CORNERS */
+function renderCorners(){
+  const el=$('cornersGrid'); if(!el)return;
+  const corners=DB.corners.length?DB.corners:[
+    {title:'শিক্ষার্থী কর্নার',icon:'🧑‍🎓',color:'#1877f2',bg:'#dbeafe',desc:'শিক্ষার্থীদের তথ্য',links:[{name:'রেজাল্ট',url:'results'},{name:'ডাউনলোড',url:'downloads'}]},
+    {title:'শিক্ষক কর্নার',icon:'👨‍🏫',color:'#15803d',bg:'#dcfce7',desc:'শিক্ষকদের তথ্য',links:[{name:'শিক্ষক তালিকা',url:'teachers'}]},
+    {title:'অভিভাবক কর্নার',icon:'👨‍👩‍👧',color:'#c8962a',bg:'#fef9c3',desc:'অভিভাবকদের তথ্য',links:[{name:'রেজাল্ট',url:'results'}]},
+    {title:'একাডেমিক',icon:'📊',color:'#dc2626',bg:'#fee2e2',desc:'পরীক্ষা ও ফলাফল',links:[{name:'রেজাল্ট',url:'results'},{name:'ডাউনলোড',url:'downloads'}]}
+  ];
+  el.innerHTML=corners.map(c=>`
+    <div class="corner-card" style="border-top:4px solid ${esc(c.color||'#333')}">
+      <div class="c-icon" style="background:${esc(c.bg||'#eee')}">${c.icon||'📌'}</div>
+      <h3>${esc(c.title||'')}</h3>
+      <p style="font-size:11px;color:var(--muted)">${esc(c.desc||'')}</p>
+      <div class="c-links">${(c.links||[]).map(l=>`<a onclick="nav('${esc(l.url||'home')}')">${esc(l.name||'')}</a>`).join('')}</div>
+    </div>`).join('');
+}
+
+/* TEACHERS PUBLIC */
+function renderTeachers(){
+  const el=$('teachersGrid'); if(!el)return;
+  if(!DB.teachers.length){el.innerHTML='<div style="text-align:center;padding:40px;color:var(--muted)">শিক্ষক তথ্য নেই</div>';return;}
+  el.innerHTML=DB.teachers.map(t=>`
+    <div class="t-card">
+      <div class="t-img"><img src="${esc(t.photo||'https://placehold.co/170x150/e2e8f0/666?text=Photo')}" alt="${esc(t.name||'')}" loading="lazy" onerror="this.src='https://placehold.co/170x150/e2e8f0/666?text=Photo'"></div>
+      <div class="t-info"><h4>${esc(t.name||'')}</h4><div class="dept">${esc(t.role||'')}</div><div class="edu">${esc(t.dept||'')}${t.edu?' • '+t.edu:''}</div></div>
+    </div>`).join('');
+}
+
+/* DOWNLOADS & LINKS PUBLIC */
+function renderDownloads(){
+  const el=$('dlList'); if(!el)return;
+  el.innerHTML=DB.downloads.map(d=>`
+    <a class="dl-item" href="${esc(d.url||'#')}" target="_blank">
+      <div class="dl-icon">📄</div>
+      <div class="dl-info"><h4>${esc(d.title||'')}</h4><span>${esc(d.category||'ডাউনলোড করুন')}</span></div>
+    </a>`).join('')||'<div style="text-align:center;padding:40px;color:var(--muted)">কোনো ফাইল নেই</div>';
+}
+function renderLinks(){
+  const el=$('linksGrid'); if(!el)return;
+  el.innerHTML=DB.links.map(l=>`
+    <a class="link-item" href="${esc(l.url||'#')}" target="_blank">
+      <span style="font-size:18px">${l.icon||'🔗'}</span>
+      <span>${esc(l.title||'')}</span>
+    </a>`).join('');
+}
+
+/* ══ NAVIGATION ══ */
+function nav(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const pg=$('page-'+name)||$('page-home'); pg.classList.add('active');
+  document.querySelectorAll('.nav-inner a').forEach(a=>a.classList.remove('active'));
+  const na=$('n-'+name); if(na)na.classList.add('active');
+  window.scrollTo(0,0);
+  if(name==='notices') renderNoticesPage();
+  if(name==='results'){updateExamFilter();searchRes();}
+  if(name==='gallery') renderGalleryPage();
+  if(name==='teachers') renderTeachers();
+  if(name==='downloads') renderDownloads();
+  if(name==='links') renderLinks();
+}
+
+/* ══ ADMISSION ══ */
+function submitAdmission(){
+  if(!$('adm_name_bn').value.trim()){$('admMsg').innerHTML='<div class="err">❌ শিক্ষার্থীর নাম দিন</div>';return;}
+  $('admMsg').innerHTML='<div class="suc">✅ আবেদন সফলভাবে জমা হয়েছে!</div>';
+}
+
+/* ══ ADMIN AUTH ══ */
+function openAdmin(){
+  $('adminShell').classList.add('show');
+  $('publicSite').style.display='none';
+  if(tok) showAdminPanel();
+}
+function closeAdmin(){
+  $('adminShell').classList.remove('show');
+  $('publicSite').style.display='block';
+}
+async function doLogin(){
+  const u=$('auUser').value.trim(), p=$('auPass').value.trim();
+  $('loginMsg').innerHTML='<div class="info">লগইন হচ্ছে...</div>';
+  const r=await api('login',{user:u,pass:p});
+  if(r.ok&&r.token){
+    tok=r.token; try{localStorage.setItem('adminToken',tok);}catch(e){}
+    showAdminPanel(); $('loginMsg').innerHTML='';
+  } else {
+    $('loginMsg').innerHTML=`<div class="err">❌ ${esc(r.error||'লগইন ব্যর্থ')}</div>`;
+  }
+}
+function doLogout(){
+  api('logout'); tok=''; try{localStorage.removeItem('adminToken');}catch(e){}
+  $('loginScreen').style.display='flex';
+  const p=$('adminPanel'); p.style.display='none';
+  $('auUser').value=''; $('auPass').value='';
+}
+async function showAdminPanel(){
+  $('loginScreen').style.display='none';
+  const p=$('adminPanel'); p.style.display='flex';
+  // Sliders সহ সব ডেটা API থেকে নতুন করে লোড করি
+  const slr=await api('getSliders');
+  if(slr.ok&&slr.data) DB.sliders=slr.data;
+  loadSettingsForm(); loadAdminLists(); loadDashboard();
+  loadStudents(); loadFees(); loadStaff(); loadSalaries();
+}
+
+/* ══ PANEL SWITCH ══ */
+const panelTitles={dash:'📊 ড্যাশবোর্ড',settings:'⚙️ সাইট সেটিংস',notices:'📢 নোটিশ',sliders:'🖼️ স্লাইডার',gallery:'📷 গ্যালারি',teachers:'👨‍🏫 শিক্ষক',corners:'🗂️ কর্নার',results:'📊 রেজাল্ট',downloads:'📥 ডাউনলোড',links:'🔗 লিংক',students:'🧑‍🎓 শিক্ষার্থী',fees:'💰 বেতন',staff:'👥 স্টাফ',salaries:'💵 স্টাফ বেতন',password:'🔑 পাসওয়ার্ড'};
+function ap(name){
+  document.querySelectorAll('.adm-panel').forEach(p=>p.classList.remove('active'));
+  const panel=$('panel-'+name); if(panel)panel.classList.add('active');
+  document.querySelectorAll('.adm-nav a').forEach(a=>a.classList.remove('active'));
+  const found=document.querySelector(`.adm-nav a[onclick="ap('${name}')"]`);
+  if(found)found.classList.add('active');
+  txt('panelTitle',panelTitles[name]||name);
+  if(name==='dash') loadDashboard();
+  if(name==='corners') buildCornersEditor();
+  if(window.innerWidth<769) $('admSidebar').classList.remove('open');
+}
+
+/* ══ SETTINGS TABS ══ */
+function stab(name){
+  document.querySelectorAll('.stab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.stab-panel').forEach(p=>p.classList.remove('show'));
+  const sp=$(name); if(sp)sp.classList.add('show');
+  const tabs=['s-general','s-logo','s-footer','s-contact','s-social','s-stats','s-speech'];
+  const idx=tabs.indexOf(name);
+  document.querySelectorAll('.stab')[idx]?.classList.add('active');
+}
+
+function loadSettingsForm(){
+  const keys=['school_name','slogan','urgent_notice','topbar_text','history','mission',
+    'president_name','president_photo','president_speech',
+    'principal_name','principal_photo','principal_speech',
+    'phone','email','address','office_hours','map_embed',
+    'facebook_url','youtube_url','website_link',
+    'stat_students','stat_teachers','stat_pass','stat_years','stat_classes',
+    'footer_about','footer_copyright','logo_text','logo_url',
+    'header_bg','nav_bg','footer_bg'];
+  keys.forEach(k=>val('s_'+k, S[k]||''));
+  ['header_bg','nav_bg','footer_bg'].forEach(k=>{
+    const c=$('s_'+k), t=$('s_'+k+'_txt');
+    if(c&&S[k]) c.value=S[k];
+    if(t&&S[k]) t.value=S[k];
+  });
+  txt('sidebarName',S.school_name||'স্কুল ম্যানেজমেন্ট');
+  const sl=$('sidebarLogo'); if(sl) sl.textContent=S.logo_text||'ফা';
+  txt('loginLogo',S.logo_text||'ফা');
+}
+
+async function saveSettings(){
+  const keys=['school_name','slogan','urgent_notice','topbar_text','history','mission',
+    'president_name','president_photo','president_speech',
+    'principal_name','principal_photo','principal_speech',
+    'phone','email','address','office_hours','map_embed',
+    'facebook_url','youtube_url','website_link',
+    'stat_students','stat_teachers','stat_pass','stat_years','stat_classes',
+    'footer_about','footer_copyright','logo_text','logo_url',
+    'header_bg','nav_bg','footer_bg'];
+  keys.forEach(k=>{const e=$('s_'+k);if(e) S[k]=e.value;});
+  ['header_bg','nav_bg','footer_bg'].forEach(k=>{const e=$('s_'+k);if(e) S[k]=e.value;});
+  const r=await api('saveSettings',S);
+  const msgIds=['sMsg-general','sMsg-logo','sMsg-footer','sMsg-contact','sMsg-social','sMsg-stats','sMsg-speech'];
+  if(r.ok){
+    msgIds.forEach(id=>msg(id,'✅ সংরক্ষিত হয়েছে!'));
+    applySettings(); loadSettingsForm();
+  } else {
+    msgIds.forEach(id=>msg(id,'❌ '+(r.error||'ব্যর্থ'),false));
+  }
+}
+
+/* ══ DASHBOARD ══ */
+async function loadDashboard(){
+  const r=await api('getDashboard'); if(!r.ok||!r.data)return;
+  const d=r.data;
+  const fdb=$('feeDueBadge'); if(fdb) fdb.textContent=d.feeDueCount||0;
+  const sdb=$('salDueBadge'); if(sdb) sdb.textContent=d.salDueCount||0;
+  // Slider summary in dashboard
+  const dsc=$('dashSliderCount'); if(dsc) dsc.textContent=DB.sliders.length;
+  const dsl=$('dashSliderList');
+  if(dsl){
+    if(!DB.sliders.length){
+      dsl.innerHTML='<div style="font-size:12px;color:var(--muted);padding:8px">কোনো স্লাইড নেই। উপরের বাটনে ক্লিক করে স্লাইড যোগ করুন।</div>';
+    } else {
+      const sorted=[...DB.sliders].sort((a,b)=>Number(a.order||99)-Number(b.order||99));
+      dsl.innerHTML=sorted.map(s=>`
+        <div style="width:110px;flex-shrink:0">
+          <div style="height:65px;border-radius:7px;background-image:url('${esc(s.bg||'')}');background-size:cover;background-position:center;border:2px solid var(--border);margin-bottom:4px;background-color:#e2e8f0"></div>
+          <div style="font-size:10px;font-weight:700;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(s.title||'(শিরোনাম নেই)')}</div>
+          <div style="font-size:9px;color:var(--muted)">ক্রম ${esc(String(s.order||''))}</div>
+        </div>`).join('');
+    }
+  }
+  const kpi=$('dashKPI'); if(!kpi)return;
+  kpi.innerHTML=[
+    {label:'মোট শিক্ষার্থী',val:d.totalStudents,icon:'🧑‍🎓',cls:'blue'},
+    {label:'সক্রিয় শিক্ষার্থী',val:d.activeStudents,icon:'✅',cls:'green'},
+    {label:'মোট স্টাফ',val:d.totalStaff,icon:'👨‍🏫',cls:''},
+    {label:'মোট নোটিশ',val:d.totalNotices,icon:'📢',cls:'gold'},
+    {label:'রেজাল্ট এন্ট্রি',val:d.totalResults,icon:'📊',cls:'blue'},
+    {label:'ফি সংগ্রহ',val:'৳'+numFmt(d.feeCollected||0),icon:'💰',cls:'green'},
+    {label:'বকেয়া ফি',val:'৳'+numFmt(d.feeDue||0),icon:'⚠️',cls:'red'},
+    {label:'স্টাফ বেতন',val:'৳'+numFmt(d.salPaid||0),icon:'💵',cls:''},
+    {label:'স্টাফ বকেয়া',val:'৳'+numFmt(d.salDue||0),icon:'🔴',cls:'red'},
+  ].map(c=>`<div class="kpi-card ${c.cls}"><div class="kpi-icon">${c.icon}</div><div><div class="kpi-val">${esc(String(c.val))}</div><div class="kpi-lbl">${esc(c.label)}</div></div></div>`).join('');
+  const fd=$('dashFeesDue');
+  if(fd) fd.innerHTML=(d.recentFees||[]).length
+    ?(d.recentFees).map(f=>`<div class="dw-row"><div><strong>${esc(f.studentName||'')}</strong><div style="font-size:10px;color:var(--muted)">${esc(f.month||'')} | ${esc(f.class||'')}</div></div><div class="status-due">৳${numFmt(f.due||0)}</div></div>`).join('')
+    :'<div style="text-align:center;padding:20px;color:var(--muted);font-size:12px">কোনো বকেয়া নেই ✅</div>';
+  const sd=$('dashSalDue');
+  if(sd) sd.innerHTML=(d.recentSal||[]).length
+    ?(d.recentSal).map(s=>`<div class="dw-row"><div><strong>${esc(s.staffName||'')}</strong><div style="font-size:10px;color:var(--muted)">${esc(s.month||'')}</div></div><div class="status-due">৳${numFmt(s.due||0)}</div></div>`).join('')
+    :'<div style="text-align:center;padding:20px;color:var(--muted);font-size:12px">কোনো বকেয়া নেই ✅</div>';
+  const cw=$('dashClassWise');
+  if(cw&&d.classWise){
+    const entries=Object.entries(d.classWise);
+    const maxV=Math.max(...entries.map(([,v])=>v),1);
+    cw.innerHTML=entries.map(([k,v])=>`<div class="cw-row"><div style="width:38px;font-size:12px;color:var(--navy)">${esc(k)}</div><div class="cw-bar"><div class="cw-fill" style="width:${(v/maxV*100).toFixed(0)}%"></div></div><div class="cw-cnt">${v}</div></div>`).join('')||'<div style="color:var(--muted);font-size:12px;padding:12px">তথ্য নেই</div>';
+  }
+  const rs=$('dashRecentStudents');
+  if(rs) rs.innerHTML=(d.students||[]).map(s=>`<div class="dw-row"><div><strong>${esc(s.name||'')}</strong><div style="font-size:10px;color:var(--muted)">${esc(s.class||'')} ${esc(s.section||'')} | রোল:${esc(s.roll||'')}</div></div><span class="badge b-green">সক্রিয়</span></div>`).join('')||'<div style="color:var(--muted);font-size:12px;padding:12px">কোনো শিক্ষার্থী নেই</div>';
+}
+
+/* ══ ADMIN LISTS ══ */
+function loadAdminLists(){
+  renderAdminNotices();
+  renderAdminSliders();  /* ← fixed slider render */
+  renderAdminGallery();  /* ← fixed gallery render */
+  renderAdminTeachers();
+  renderAdminResults();
+  renderAdminDownloads();
+  renderAdminLinks();
+}
+
+/* NOTICES ADMIN */
+function renderAdminNotices(){
+  const el=$('adminNotices'), ct=$('noticeCount');
+  if(ct) ct.textContent=DB.notices.length;
+  if(!el)return;
+  el.innerHTML=DB.notices.map((n,idx)=>`
+    <div class="item-row">
+      <div style="flex-shrink:0;width:32px;height:32px;border-radius:6px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:var(--gold2);font-size:13px">📢</div>
+      <div class="ir-main">
+        <strong>${esc(n.title||'(শিরোনাম নেই)')}</strong> <span class="tag">${esc(n.badge||n.type||'')}</span>
+        <div class="ir-sub">📅 ${esc(n.date||'')}${n.content?' • '+esc((n.content).substring(0,50))+'...':''}</div>
+      </div>
+      <div class="ir-actions">
+        <button class="btn btn-sm" style="background:#dbeafe;color:#1d4ed8;padding:4px 9px;font-size:11px" onclick="editNotice(${idx})">✏️ সম্পাদনা</button>
+        <button class="btn btn-danger btn-xs" onclick="delItem('notice',${idx})">🗑</button>
+      </div>
+    </div>`).join('')||noData();
+}
+
+/* ══ SLIDERS ADMIN — card grid with edit + delete ══ */
+function updateSliderPreview(){
+  const url=$('sl_bg').value.trim();
+  const box=$('slBgPreview'), thumb=$('slBgThumb');
+  if(url&&box&&thumb){
+    box.style.display='block';
+    thumb.style.backgroundImage=`url('${esc(url)}')`;
+  } else if(box){
+    box.style.display='none';
+  }
+}
+
+function renderAdminSliders(){
+  const el=$('adminSlidersGrid'), ct=$('sliderCount');
+  if(ct) ct.textContent=DB.sliders.length;
+  if(!el)return;
+  if(!DB.sliders.length){
+    el.innerHTML='<div style="padding:18px;color:var(--muted);font-size:12px;text-align:center;grid-column:1/-1"><span style="font-size:30px;display:block;margin-bottom:8px">🖼️</span>কোনো স্লাইড নেই। উপরে ছবির URL দিয়ে স্লাইড যোগ করুন।</div>';
+    return;
+  }
+  el.innerHTML=[...DB.sliders].sort((a,b)=>Number(a.order||99)-Number(b.order||99)).map((s,i)=>{
+    const realIdx=DB.sliders.indexOf(s);
+    const bgUrl=s.bg||s.bgUrl||'';
+    return `<div class="slider-admin-card">
+      <div class="sac-bg" style="background-image:url('${esc(bgUrl)}')">
+        <div class="sac-title">${esc(s.title||'(শিরোনাম নেই)')}</div>
+      </div>
+      <div class="sac-body">
+        <div class="sac-sub">${esc(s.subtitle||s.sub||'')||'(সাবটাইটেল নেই)'}</div>
+        <div style="font-size:10px;color:var(--muted);margin-bottom:4px;word-break:break-all">🌄 ${bgUrl?esc(bgUrl.length>45?bgUrl.substring(0,45)+'...':bgUrl):'URL নেই'}</div>
+        <div style="font-size:10px;color:#64748b;margin-bottom:6px">ক্রম: ${esc(String(s.order||''))} ${s.btn1Text?'| বাটন: '+esc(s.btn1Text):''}</div>
+        <div class="sac-actions">
+          <button class="btn btn-warning btn-xs" onclick="editSlider(${realIdx})">✏️ সম্পাদনা</button>
+          <button class="btn btn-danger btn-xs" onclick="delItem('slider',${realIdx})">🗑 ডিলিট</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+/* ══ GALLERY ADMIN — grid with overlay edit + delete ══ */
+function updateGalleryPreview(){
+  const url=$('g_url').value.trim();
+  const box=$('gPreviewBox'), img=$('gPreviewImg');
+  if(url&&box&&img){box.style.display='block';img.src=url;}
+  else if(box){box.style.display='none';}
+}
+
+function renderAdminGallery(){
+  const el=$('adminGalleryGrid'), ct=$('galleryCount');
+  if(ct) ct.textContent=DB.gallery.length;
+  if(!el)return;
+  if(!DB.gallery.length){el.innerHTML='<div style="padding:18px;color:var(--muted);font-size:12px;grid-column:1/-1">কোনো ছবি নেই</div>';return;}
+  el.innerHTML=DB.gallery.map((g,idx)=>`
+    <div class="gal-admin-item">
+      <img src="${esc(g.url||'')}" alt="${esc(g.caption||'')}" onerror="this.src='https://placehold.co/150x112/e2e8f0/999?text=Error'">
+      <div class="gal-admin-overlay">
+        <button class="btn btn-warning btn-xs" onclick="editGallery(${idx})">✏️ সম্পাদনা</button>
+        <button class="btn btn-danger btn-xs" onclick="delItem('gallery',${idx})">🗑 ডিলিট</button>
+      </div>
+      <div class="gal-admin-caption">${esc(g.caption||'(ক্যাপশন নেই)')}</div>
+    </div>`).join('');
+}
+
+function renderAdminTeachers(){
+  const el=$('adminTeachers'), ct=$('teacherCount');
+  if(ct) ct.textContent=DB.teachers.length;
+  if(!el)return;
+  el.innerHTML=DB.teachers.map((t,idx)=>`
+    <div class="item-row">
+      <img src="${esc(t.photo||'')}" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--border)" onerror="this.style.display='none'">
+      <div class="ir-main"><strong>${esc(t.name||'')}</strong> — ${esc(t.role||'')}
+        <div class="ir-sub">${esc(t.dept||'')}${t.edu?' • '+t.edu:''}</div>
+      </div>
+      <div class="ir-actions">
+        <button class="btn btn-danger btn-xs" onclick="delItem('teacher',${idx})">🗑</button>
+      </div>
+    </div>`).join('')||noData();
+}
+
+function renderAdminResults(){
+  const el=$('adminResults'), ct=$('rCount');
+  if(ct) ct.textContent=allResults.length;
+  if(!el)return;
+  el.innerHTML=allResults.slice(0,80).map((r,idx)=>`
+    <div class="item-row">
+      <div class="ir-main">
+        <strong>${esc(r.name||'')}</strong> | ${esc(r.class||'')} | রোল:${esc(r.roll||'')} | <span style="color:var(--green);font-weight:700">${esc(r.grade||'')}</span>
+        <div class="ir-sub">${esc(r.exam||'')}${r.total?' • নম্বর:'+r.total:''}</div>
+      </div>
+      <div class="ir-actions"><button class="btn btn-danger btn-xs" onclick="delItem('result',${idx})">🗑</button></div>
+    </div>`).join('')||noData();
+}
+
+function renderAdminDownloads(){
+  const el=$('adminDownloads'); if(!el)return;
+  el.innerHTML=DB.downloads.map((d,idx)=>`
+    <div class="item-row">
+      <div class="ir-main">📄 <strong>${esc(d.title||'')}</strong>
+        <div class="ir-sub">${esc(d.category||'')} • ${esc(d.url||'')}</div>
+      </div>
+      <div class="ir-actions"><button class="btn btn-danger btn-xs" onclick="delItem('download',${idx})">🗑</button></div>
+    </div>`).join('')||noData();
+}
+
+function renderAdminLinks(){
+  const el=$('adminLinks'); if(!el)return;
+  el.innerHTML=DB.links.map((l,idx)=>`
+    <div class="item-row">
+      <div class="ir-main">${l.icon||'🔗'} <strong>${esc(l.title||'')}</strong>
+        <div class="ir-sub">${esc(l.url||'')}</div>
+      </div>
+      <div class="ir-actions"><button class="btn btn-danger btn-xs" onclick="delItem('link',${idx})">🗑</button></div>
+    </div>`).join('')||noData();
+}
+
+/* ══ DELETE BY INDEX ══ */
+async function delItem(type, idx){
+  const typeMap={
+    notice:{arr:DB.notices,action:'deleteNotice'},
+    gallery:{arr:DB.gallery,action:'deleteGallery'},
+    slider:{arr:DB.sliders,action:'deleteSlider'},
+    teacher:{arr:DB.teachers,action:'deleteTeacher'},
+    result:{arr:allResults,action:'deleteResult'},
+    download:{arr:DB.downloads,action:'deleteDownload'},
+    link:{arr:DB.links,action:'deleteLink'},
+  };
+  const tm=typeMap[type]; if(!tm){alert('অজানা ধরন');return;}
+  const item=tm.arr[idx]; if(!item){alert('আইটেম পাওয়া যায়নি');return;}
+  const id=String(item.id||'');
+  if(!id||id==='undefined'){alert('ID নেই');return;}
+  if(!confirm('ডিলিট করবেন?'))return;
+  const r=await api(tm.action,{id});
+  if(r.ok){
+    tm.arr.splice(idx,1);
+    if(type==='result') DB.results=[...allResults];
+    // re-render public
+    if(type==='notice') renderHomeNotices();
+    if(type==='gallery'){renderHomeGallery();renderGalleryPage();}
+    if(type==='slider') renderHero();
+    if(type==='teacher') renderTeachers();
+    if(type==='result'){renderHomeResults();updateExamFilter();}
+    if(type==='download') renderDownloads();
+    if(type==='link') renderLinks();
+    loadAdminLists(); loadDashboard();
+  } else alert('ডিলিট ব্যর্থ: '+(r.error||''));
+}
+
+/* Legacy del() for students/fees/staff/salaries */
+async function del(type,id){
+  if(!id||id==='undefined'){alert('ID নেই');return;}
+  if(!confirm('ডিলিট করবেন?'))return;
+  const actions={student:'deleteStudent',fee:'deleteFee',staff:'deleteStaff',salary:'deleteSalary'};
+  const r=await api(actions[type],{id});
+  if(r.ok){
+    if(type==='student') loadStudents();
+    if(type==='fee') loadFees();
+    if(type==='staff') loadStaff();
+    if(type==='salary') loadSalaries();
+    loadDashboard();
+  } else alert('ডিলিট ব্যর্থ: '+(r.error||''));
+}
+
+/* ══ EDIT MODAL ══ */
+function closeModal(){
+  $('editModal').classList.remove('show');
+  editState={type:'',id:'',idx:-1};
+}
+
+/* EDIT NOTICE */
+function editNotice(idx){
+  const n=DB.notices[idx]; if(!n)return;
+  editState={type:'notice',id:String(n.id||''),idx};
+  $('editModalTitle').textContent='✏️ নোটিশ সম্পাদনা';
+  $('editModalBody').innerHTML=`
+    <div class="fg"><label>শিরোনাম</label><input id="em_title" value="${esc(n.title||'')}"></div>
+    <div class="fg"><label>ধরন</label><select id="em_type">
+      <option value="general" ${n.type==='general'?'selected':''}>সাধারণ</option>
+      <option value="exam" ${n.type==='exam'?'selected':''}>পরীক্ষা</option>
+      <option value="holiday" ${n.type==='holiday'?'selected':''}>ছুটি</option>
+      <option value="urgent" ${n.type==='urgent'?'selected':''}>জরুরি</option>
+      <option value="job" ${n.type==='job'?'selected':''}>নিয়োগ</option>
+    </select></div>
+    <div class="fg"><label>বিস্তারিত</label><textarea id="em_content" rows="4">${esc(n.content||'')}</textarea></div>
+    <div class="fg"><label>সংযুক্তি URL</label><input id="em_attach" value="${esc(n.attach||'')}"></div>`;
+  $('editModal').classList.add('show');
+}
+
+/* EDIT SLIDER */
+function editSlider(idx){
+  const s=DB.sliders[idx]; if(!s)return;
+  editState={type:'slider',id:String(s.id||''),idx};
+  $('editModalTitle').textContent='✏️ স্লাইড সম্পাদনা';
+  const pageOpts=['','home','notices','results','gallery','teachers','admission','downloads','contact'];
+  const pageLabels={'':'— বেছে নিন —','home':'হোম','notices':'নোটিশ','results':'রেজাল্ট','gallery':'গ্যালারি','teachers':'শিক্ষক','admission':'ভর্তি আবেদন','downloads':'ডাউনলোড','contact':'যোগাযোগ'};
+  const mkSel=(id,val)=>`<select id="${id}">${pageOpts.map(o=>`<option value="${o}" ${val===o?'selected':''}>${pageLabels[o]||o}</option>`).join('')}</select>`;
+  $('editModalBody').innerHTML=`
+    <div class="fg"><label>ব্যাকগ্রাউন্ড ছবির URL <span style="color:var(--red)">*</span></label>
+      <input id="em_bg" value="${esc(s.bg||s.bgUrl||'')}" oninput="document.getElementById('em_bg_prev').style.backgroundImage='url('+this.value+')'">
+      <div id="em_bg_prev" style="height:80px;border-radius:7px;background-size:cover;background-position:center;border:2px solid var(--border);margin-top:7px;background-image:url('${esc(s.bg||'')}')"></div>
+    </div>
+    <div class="fg"><label>শিরোনাম</label><input id="em_title" value="${esc(s.title||'')}"></div>
+    <div class="fg"><label>সাবটাইটেল</label><input id="em_sub" value="${esc(s.subtitle||s.sub||'')}"></div>
+    <div class="fg-row">
+      <div class="fg"><label>বাটন ১ টেক্সট</label><input id="em_b1t" value="${esc(s.btn1Text||'')}"></div>
+      <div class="fg"><label>বাটন ১ পেইজ</label>${mkSel('em_b1l',s.btn1Link||'')}</div>
+    </div>
+    <div class="fg-row">
+      <div class="fg"><label>বাটন ২ টেক্সট</label><input id="em_b2t" value="${esc(s.btn2Text||'')}"></div>
+      <div class="fg"><label>বাটন ২ পেইজ</label>${mkSel('em_b2l',s.btn2Link||'')}</div>
+    </div>
+    <div class="fg"><label>ক্রম নম্বর</label><input id="em_order" type="number" value="${esc(String(s.order||'1'))}" style="width:120px"></div>`;
+  $('editModal').classList.add('show');
+}
+
+/* EDIT GALLERY */
+function editGallery(idx){
+  const g=DB.gallery[idx]; if(!g)return;
+  editState={type:'gallery',id:String(g.id||''),idx};
+  $('editModalTitle').textContent='✏️ ছবি সম্পাদনা';
+  $('editModalBody').innerHTML=`
+    <div class="fg"><label>ছবির URL</label><input id="em_url" value="${esc(g.url||'')}"></div>
+    <div class="fg"><label>ক্যাপশন</label><input id="em_caption" value="${esc(g.caption||'')}"></div>
+    <div id="em_gPreview" style="margin-top:8px">
+      <img src="${esc(g.url||'')}" style="max-height:100px;border-radius:7px;border:2px solid var(--border)" onerror="this.style.display='none'">
+    </div>`;
+  $('editModal').classList.add('show');
+}
+
+async function submitEdit(){
+  const {type,id,idx}=editState;
+  if(!type||!id) return;
+  let payload={id}, updateLocal={};
+
+  if(type==='notice'){
+    const title=$('em_title')?.value.trim();
+    const content=$('em_content')?.value.trim();
+    if(!title||!content){alert('শিরোনাম ও বিবরণ দিন');return;}
+    const t=$('em_type').value;
+    const badgeMap={general:'নোটিশ',exam:'পরীক্ষা',holiday:'ছুটি',urgent:'জরুরি',job:'নিয়োগ'};
+    payload={...payload,title,content,type:t,badge:badgeMap[t]||'নোটিশ',attach:$('em_attach')?.value.trim()||''};
+    updateLocal={title,content,type:t,badge:badgeMap[t]||'নোটিশ',attach:$('em_attach')?.value.trim()||''};
+  }
+  if(type==='slider'){
+    const bg=$('em_bg')?.value.trim();
+    const title=$('em_title')?.value.trim();
+    if(!bg){alert('ছবির URL দিন');return;}
+    if(!title){alert('শিরোনাম দিন');return;}
+    payload={...payload,title,subtitle:$('em_sub')?.value.trim()||'',bg,btn1Text:$('em_b1t')?.value.trim()||'',btn1Link:$('em_b1l')?.value||'',btn2Text:$('em_b2t')?.value.trim()||'',btn2Link:$('em_b2l')?.value||'',order:$('em_order')?.value||'1'};
+    updateLocal={...payload};
+  }
+  if(type==='gallery'){
+    const url=$('em_url')?.value.trim();
+    const caption=$('em_caption')?.value.trim()||'';
+    if(!url){alert('URL দিন');return;}
+    payload={...payload,url,caption};
+    updateLocal={url,caption};
+  }
+
+  const actionMap={notice:'updateNotice',slider:'updateSlider',gallery:'updateGallery'};
+  const r=await api(actionMap[type],payload);
+  if(r.ok){
+    // update local array
+    const arrMap={notice:DB.notices,slider:DB.sliders,gallery:DB.gallery};
+    if(arrMap[type]&&idx>=0) arrMap[type][idx]={...arrMap[type][idx],...updateLocal};
+    closeModal();
+    // re-render
+    if(type==='notice'){renderHomeNotices();renderAdminNotices();}
+    if(type==='slider'){renderHero();renderAdminSliders();}
+    if(type==='gallery'){renderHomeGallery();renderGalleryPage();renderAdminGallery();}
+  } else alert('আপডেট ব্যর্থ: '+(r.error||''));
+}
+
+/* ══ MSG ══ */
+function msg(id,text,ok=true){
+  const el=$(id); if(!el)return;
+  el.innerHTML=`<div class="${ok?'suc':'err'}">${esc(text)}</div>`;
+  setTimeout(()=>el.innerHTML='',3500);
+}
+
+/* ══ ADD FUNCTIONS ══ */
+async function addNotice(){
+  const title=$('n_title').value.trim(), content=$('n_content').value.trim();
+  if(!title||!content){msg('nMsg','❌ শিরোনাম ও বিবরণ দিন',false);return;}
+  const type=$('n_type').value;
+  const badgeMap={general:'নোটিশ',exam:'পরীক্ষা',holiday:'ছুটি',urgent:'জরুরি',job:'নিয়োগ'};
+  const r=await api('addNotice',{title,content,type,badge:badgeMap[type],date:today(),attach:$('n_attach').value.trim()});
+  if(r.ok&&r.id){
+    DB.notices.unshift({id:r.id,title,content,type,badge:badgeMap[type],date:today(),attach:$('n_attach').value.trim()});
+    ['n_title','n_content','n_attach'].forEach(id=>{const e=$(id);if(e)e.value='';});
+    renderHomeNotices(); renderAdminNotices();
+    msg('nMsg','✅ নোটিশ প্রকাশিত!');
+  } else msg('nMsg','❌ '+(r.error||'ব্যর্থ'),false);
+}
+
+async function addSlider(){
+  const title=$('sl_title').value.trim(), bg=$('sl_bg').value.trim();
+  if(!bg){msg('slMsg','❌ ছবির URL দিন',false);return;}
+  if(!title){msg('slMsg','❌ শিরোনাম দিন',false);return;}
+  const payload={
+    title,
+    subtitle:$('sl_sub').value.trim(),
+    bg,
+    btn1Text:$('sl_b1t').value.trim(),
+    btn1Link:$('sl_b1l').value||'',
+    btn2Text:$('sl_b2t').value.trim(),
+    btn2Link:$('sl_b2l').value||'',
+    order:$('sl_order').value||'99'
+  };
+  const r=await api('addSlider',payload);
+  if(r.ok&&r.id){
+    DB.sliders.push({id:r.id,...payload});
+    ['sl_title','sl_sub','sl_bg','sl_b1t','sl_b2t','sl_order'].forEach(id=>{const e=$(id);if(e)e.value='';});
+    const b1l=$('sl_b1l'), b2l=$('sl_b2l');
+    if(b1l)b1l.value=''; if(b2l)b2l.value='';
+    const prev=$('slBgPreview'); if(prev) prev.style.display='none';
+    renderHero(); renderAdminSliders();
+    msg('slMsg','✅ স্লাইড যোগ হয়েছে! হোম পেইজে দেখুন।');
+  } else msg('slMsg','❌ '+(r.error||'ব্যর্থ'),false);
+}
+
+async function addGallery(){
+  const url=$('g_url').value.trim(), cap=$('g_cap').value.trim();
+  if(!url){msg('gMsg','❌ URL দিন',false);return;}
+  const r=await api('addGallery',{url,caption:cap});
+  if(r.ok&&r.id){
+    DB.gallery.push({id:r.id,url,caption:cap});
+    $('g_url').value=''; $('g_cap').value='';
+    const prev=$('gPreviewBox'); if(prev) prev.style.display='none';
+    renderHomeGallery(); renderGalleryPage(); renderAdminGallery();
+    msg('gMsg','✅ ছবি যোগ হয়েছে!');
+  } else msg('gMsg','❌ '+(r.error||'ব্যর্থ'),false);
+}
+
+async function addTeacher(){
+  const name=$('t_name').value.trim();
+  if(!name){msg('tMsg','❌ নাম দিন',false);return;}
+  const payload={name,role:$('t_role').value.trim(),dept:$('t_dept').value.trim(),edu:$('t_edu').value.trim(),photo:$('t_photo').value.trim(),phone:$('t_phone').value.trim()};
+  const r=await api('addTeacher',payload);
+  if(r.ok&&r.id){
+    DB.teachers.push({id:r.id,...payload});
+    ['t_name','t_role','t_dept','t_edu','t_photo','t_phone'].forEach(id=>{const e=$(id);if(e)e.value='';});
+    renderTeachers(); renderAdminTeachers();
+    msg('tMsg','✅ শিক্ষক যোগ হয়েছে!');
+  } else msg('tMsg','❌ '+(r.error||'ব্যর্থ'),false);
+}
+
+/* ══ CORNERS ══ */
+function buildCornersEditor(){
+  const el=$('cornersEditor'); if(!el)return;
+  const corners=DB.corners.length?DB.corners:[
+    {id:'c1',title:'শিক্ষার্থী কর্নার',icon:'🧑‍🎓',color:'#1877f2',bg:'#dbeafe',desc:'',links:[{name:'রেজাল্ট',url:'results'}]},
+    {id:'c2',title:'শিক্ষক কর্নার',icon:'👨‍🏫',color:'#15803d',bg:'#dcfce7',desc:'',links:[]},
+    {id:'c3',title:'অভিভাবক কর্নার',icon:'👨‍👩‍👧',color:'#c8962a',bg:'#fef9c3',desc:'',links:[]},
+    {id:'c4',title:'একাডেমিক',icon:'📊',color:'#dc2626',bg:'#fee2e2',desc:'',links:[]},
+  ];
+  window._editCorners=corners.map(c=>({...c,links:[...(c.links||[])]}));
+  el.innerHTML=corners.map((c,ci)=>`
+    <div style="background:var(--light);border-radius:var(--r);padding:14px;margin-bottom:12px;border-left:4px solid ${esc(c.color||'#333')}">
+      <div style="font-weight:700;color:var(--navy);margin-bottom:10px">${c.icon||'📌'} ${esc(c.title||'')}</div>
+      <div id="cls_${ci}" style="display:flex;flex-direction:column;gap:6px">
+        ${(c.links||[]).map((l,li)=>`<div style="display:flex;gap:7px">
+          <input placeholder="লিংকের নাম" value="${esc(l.name||'')}" id="cl_n_${ci}_${li}" style="flex:1;padding:7px 10px;border:1.5px solid var(--border);border-radius:7px;font-family:inherit;font-size:12px">
+          <input placeholder="পেইজ URL" value="${esc(l.url||'')}" id="cl_u_${ci}_${li}" style="flex:1;padding:7px 10px;border:1.5px solid var(--border);border-radius:7px;font-family:inherit;font-size:12px">
+          <button class="btn btn-danger btn-xs" onclick="removeCornerLink(${ci},${li})">✕</button>
+        </div>`).join('')}
+      </div>
+      <button class="btn btn-sm btn-navy" style="margin-top:8px" onclick="addCornerLink(${ci})">+ লিংক যোগ</button>
+    </div>`).join('');
+}
+function addCornerLink(ci){const c=window._editCorners[ci];if(!c)return;c.links.push({name:'নতুন লিংক',url:'home'});buildCornersEditor();}
+function removeCornerLink(ci,li){const c=window._editCorners[ci];if(!c)return;c.links.splice(li,1);buildCornersEditor();}
+async function saveCorners(){
+  const corners=(window._editCorners||[]).map((c,ci)=>{
+    const newLinks=[];
+    (c.links||[]).forEach((_,li)=>{
+      const n=$('cl_n_'+ci+'_'+li), u=$('cl_u_'+ci+'_'+li);
+      if(n&&n.value.trim()) newLinks.push({name:n.value,url:u?u.value:'home'});
+    });
+    return {...c,links:newLinks};
+  });
+  const r=await api('saveCorners',{corners});
+  if(r.ok){DB.corners=corners;renderCorners();msg('cornerMsg','✅ কর্নার সংরক্ষিত!');}
+  else msg('cornerMsg','❌ '+(r.error||''),false);
+}
+
+/* ══ RESULTS ══ */
+async function addResult(){
+  const exam=$('r_exam').value.trim(),roll=$('r_roll').value.trim(),name=$('r_name').value.trim();
+  if(!exam||!roll||!name){msg('rMsg','❌ পরীক্ষা, রোল ও নাম দিন',false);return;}
+  const payload={exam,class:$('r_class').value,roll,name,total:$('r_total').value,grade:$('r_grade').value,subjects:$('r_subjects').value,remarks:$('r_remarks').value};
+  const r=await api('addResult',payload);
+  if(r.ok&&r.id){
+    payload.id=r.id; allResults.push(payload); DB.results=[...allResults];
+    ['r_roll','r_name','r_total','r_subjects','r_remarks'].forEach(id=>{const e=$(id);if(e)e.value='';});
+    renderHomeResults(); renderAdminResults(); updateExamFilter();
+    msg('rMsg','✅ রেজাল্ট যোগ হয়েছে!');
+  } else msg('rMsg','❌ '+(r.error||''),false);
+}
+function toggleBulk(){const e=$('bulkArea');e.style.display=e.style.display==='none'?'block':'none';}
+async function addBulkResult(){
+  const lines=$('r_bulk').value.trim().split('\n').filter(l=>l.trim());
+  const rows=lines.map(line=>{const p=line.split(',').map(s=>s.trim());if(p.length<4)return null;return{exam:p[0],class:p[1],roll:p[2],name:p[3],total:p[4]||'',grade:p[5]||'—',subjects:p[6]||'',remarks:p[7]||''};}).filter(Boolean);
+  if(!rows.length){msg('rMsg','❌ কোনো বৈধ ডাটা নেই',false);return;}
+  const r=await api('addResultsBulk',{rows});
+  if(r.ok){
+    const sr=await api('getResults');
+    if(sr.ok&&sr.data){allResults=sr.data;DB.results=allResults;}
+    $('r_bulk').value='';
+    renderHomeResults(); renderAdminResults(); updateExamFilter();
+    msg('rMsg',`✅ ${rows.length}টি রেজাল্ট যোগ!`);
+  } else msg('rMsg','❌ '+(r.error||''),false);
+}
+
+/* ══ DOWNLOADS & LINKS ══ */
+async function addDownload(){
+  const title=$('d_title').value.trim(), url=$('d_url').value.trim();
+  if(!title||!url){msg('dMsg','❌ শিরোনাম ও URL দিন',false);return;}
+  const r=await api('addDownload',{title,url,category:$('d_category').value.trim()});
+  if(r.ok&&r.id){
+    DB.downloads.push({id:r.id,title,url,category:$('d_category').value.trim()});
+    ['d_title','d_url','d_category'].forEach(id=>{const e=$(id);if(e)e.value='';});
+    renderDownloads(); renderAdminDownloads();
+    msg('dMsg','✅ যোগ হয়েছে!');
+  } else msg('dMsg','❌ '+(r.error||''),false);
+}
+async function addLink(){
+  const title=$('l_title').value.trim(), url=$('l_url').value.trim();
+  if(!title||!url){msg('lMsg','❌ নাম ও URL দিন',false);return;}
+  const icon=$('l_icon').value.trim()||'🔗';
+  const r=await api('addLink',{title,url,icon});
+  if(r.ok&&r.id){
+    DB.links.push({id:r.id,title,url,icon});
+    ['l_title','l_url','l_icon'].forEach(id=>{const e=$(id);if(e)e.value='';});
+    renderLinks(); renderAdminLinks();
+    msg('lMsg','✅ যোগ হয়েছে!');
+  } else msg('lMsg','❌ '+(r.error||''),false);
+}
+
+/* ══ STUDENTS ══ */
+async function loadStudents(){
+  const r=await api('getStudents');
+  if(r.ok&&r.data) DB.students=r.data;
+  renderStudents(DB.students);
+  const sel=$('fee_stu');
+  if(sel) sel.innerHTML='<option value="">— বেছে নিন —</option>'+DB.students.map(s=>`<option value="${esc(String(s.id||''))}">${esc(s.name||'')} (${esc(s.roll||'')} - ${esc(s.class||'')})</option>`).join('');
+}
+function renderStudents(list){
+  const el=$('stuBody'), ct=$('stuCount');
+  if(ct) ct.textContent=DB.students.length;
+  if(!el)return;
+  el.innerHTML=(list||DB.students).map(s=>`<tr>
+    <td>${esc(s.name||'')}</td><td>${esc(s.roll||'')}</td><td>${esc(s.class||'')} (${esc(s.section||'')})</td>
+    <td>${esc(s.father||'')}</td><td>${esc(s.phone||'')}</td><td>৳${esc(String(s.fee||0))}</td>
+    <td><button class="btn btn-danger btn-xs" onclick="del('student','${esc(String(s.id||''))}')">🗑</button></td>
+  </tr>`).join('')||'<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:20px">কোনো শিক্ষার্থী নেই</td></tr>';
+}
+function filterStudents(q){
+  if(!q){renderStudents(DB.students);return;}
+  renderStudents(DB.students.filter(s=>(s.name||'').toLowerCase().includes(q.toLowerCase())||(s.roll||'').toLowerCase().includes(q.toLowerCase())));
+}
+async function addStudent(){
+  const name=$('stu_name').value.trim();
+  if(!name){msg('stuMsg','❌ নাম দিন',false);return;}
+  const payload={name,roll:$('stu_roll').value.trim(),class:$('stu_class').value,section:$('stu_section').value.trim(),father:$('stu_father').value.trim(),mother:$('stu_mother').value.trim(),phone:$('stu_phone').value.trim(),fee:parseInt($('stu_fee').value)||0,address:$('stu_address').value.trim(),admitYear:new Date().getFullYear().toString(),status:'active'};
+  const r=await api('addStudent',payload);
+  if(r.ok){
+    ['stu_name','stu_roll','stu_section','stu_father','stu_mother','stu_phone','stu_fee','stu_address'].forEach(id=>{const e=$(id);if(e)e.value='';});
+    await loadStudents(); msg('stuMsg','✅ শিক্ষার্থী যোগ!'); loadDashboard();
+  } else msg('stuMsg','❌ '+(r.error||''),false);
+}
+
+/* ══ FEES ══ */
+async function loadFees(){
+  const r=await api('getFees');
+  if(r.ok&&r.data) DB.fees=r.data;
+  renderFees();
+}
+function renderFees(){
+  const el=$('feeBody'); if(!el)return;
+  el.innerHTML=DB.fees.map(f=>{
+    const stu=DB.students.find(s=>String(s.id)===String(f.studentId));
+    const sName=stu?stu.name:(f.studentName||'');
+    const sCls=stu?stu.class:(f.class||'');
+    const paidAmt=Number(f.amount||0)-Number(f.due||0);
+    const sc=f.status==='paid'?'status-paid':f.status==='partial'?'status-partial':'status-due';
+    return `<tr>
+      <td>${esc(sName)}</td><td>${esc(sCls)}</td><td>${esc(f.month||'')}</td>
+      <td>৳${numFmt(f.amount||0)}</td><td>৳${numFmt(paidAmt)}</td><td>৳${numFmt(f.due||0)}</td>
+      <td><span class="${sc}">${f.status==='paid'?'✅ পরিশোধ':f.status==='partial'?'⚠️ আংশিক':'❌ বকেয়া'}</span></td>
+      <td style="white-space:nowrap">
+        ${f.status!=='paid'?`<button class="btn btn-green btn-xs" onclick="markFPaid('${esc(String(f.id||''))}')">✅</button>`:''}
+        <button class="btn btn-danger btn-xs" onclick="del('fee','${esc(String(f.id||''))}')">🗑</button>
+      </td></tr>`;
+  }).join('')||'<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:20px">কোনো রেকর্ড নেই</td></tr>';
+}
+async function addFee(){
+  const stuId=$('fee_stu').value;
+  if(!stuId){msg('feeMsg','❌ শিক্ষার্থী বেছে নিন',false);return;}
+  const stu=DB.students.find(s=>String(s.id)===stuId)||{};
+  const amount=parseInt($('fee_amt').value)||0;
+  const paid=parseInt($('fee_paid').value)||0;
+  const status=$('fee_status').value;
+  const due=status==='paid'?0:amount-paid;
+  const r=await api('addFee',{studentId:stuId,studentName:stu.name||'',class:stu.class||'',month:$('fee_month').value,amount,due,paidDate:status==='paid'?today():'',status});
+  if(r.ok){['fee_month','fee_amt','fee_paid'].forEach(id=>{const e=$(id);if(e)e.value='';});await loadFees();msg('feeMsg','✅ এন্ট্রি হয়েছে!');loadDashboard();}
+  else msg('feeMsg','❌ '+(r.error||''),false);
+}
+async function markFPaid(id){
+  const r=await api('markFeePaid',{id});
+  if(r.ok){await loadFees();loadDashboard();}
+  else alert('❌ '+(r.error||''));
+}
+
+/* ══ STAFF ══ */
+async function loadStaff(){
+  const r=await api('getStaff');
+  if(r.ok&&r.data) DB.staff=r.data;
+  renderStaff();
+  const sel=$('sal_staff');
+  if(sel) sel.innerHTML='<option value="">— বেছে নিন —</option>'+DB.staff.map(s=>`<option value="${esc(String(s.id||''))}">${esc(s.name||'')} — ৳${numFmt(s.salary||0)}/মাস</option>`).join('');
+}
+function renderStaff(){
+  const el=$('sfBody'); if(!el)return;
+  el.innerHTML=DB.staff.map(s=>`<tr>
+    <td>${esc(s.name||'')}</td><td>${esc(s.role||'')}</td><td>${esc(s.dept||'')}</td>
+    <td>${esc(s.phone||'')}</td><td>৳${numFmt(s.salary||0)}</td>
+    <td><button class="btn btn-danger btn-xs" onclick="del('staff','${esc(String(s.id||''))}')">🗑</button></td>
+  </tr>`).join('')||'<tr><td colspan="6" style="text-align:center;color:var(--muted);padding:20px">কোনো স্টাফ নেই</td></tr>';
+}
+async function addStaff(){
+  const name=$('sf_name').value.trim();
+  if(!name){msg('sfMsg','❌ নাম দিন',false);return;}
+  const r=await api('addStaff',{name,role:$('sf_role').value.trim(),dept:$('sf_dept').value.trim(),phone:$('sf_phone').value.trim(),salary:parseInt($('sf_salary').value)||0,joiningDate:$('sf_join').value,status:'active'});
+  if(r.ok){['sf_name','sf_role','sf_dept','sf_phone','sf_salary','sf_join'].forEach(id=>{const e=$(id);if(e)e.value='';});await loadStaff();msg('sfMsg','✅ স্টাফ যোগ!');loadDashboard();}
+  else msg('sfMsg','❌ '+(r.error||''),false);
+}
+
+/* ══ SALARIES ══ */
+async function loadSalaries(){
+  const r=await api('getSalaries');
+  if(r.ok&&r.data) DB.salaries=r.data;
+  renderSalaries();
+}
+function renderSalaries(){
+  const el=$('salBody'); if(!el)return;
+  el.innerHTML=DB.salaries.map(s=>{
+    const st=DB.staff.find(x=>String(x.id)===String(s.staffId))||{};
+    const sc=s.status==='paid'?'status-paid':'status-due';
+    return `<tr>
+      <td>${esc(st.name||s.staffName||'')}</td><td>${esc(st.role||'')}</td>
+      <td>${esc(s.month||'')}</td><td>৳${numFmt(s.amount||0)}</td><td>৳${numFmt(s.due||0)}</td>
+      <td><span class="${sc}">${s.status==='paid'?'✅ পরিশোধ':'❌ বকেয়া'}</span></td>
+      <td style="white-space:nowrap">
+        ${s.status!=='paid'?`<button class="btn btn-green btn-xs" onclick="markSPaid('${esc(String(s.id||''))}')">✅</button>`:''}
+        <button class="btn btn-danger btn-xs" onclick="del('salary','${esc(String(s.id||''))}')">🗑</button>
+      </td></tr>`;
+  }).join('')||'<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:20px">কোনো রেকর্ড নেই</td></tr>';
+}
+async function addSalary(){
+  const sfId=$('sal_staff').value;
+  if(!sfId){msg('salMsg','❌ স্টাফ বেছে নিন',false);return;}
+  const sf=DB.staff.find(s=>String(s.id)===sfId)||{};
+  const amount=parseInt($('sal_amt').value)||0;
+  const status=$('sal_status').value;
+  const r=await api('addSalary',{staffId:sfId,staffName:sf.name||'',month:$('sal_month').value,amount,due:status==='paid'?0:amount,paidDate:status==='paid'?today():'',status});
+  if(r.ok){['sal_month','sal_amt'].forEach(id=>{const e=$(id);if(e)e.value='';});await loadSalaries();msg('salMsg','✅ এন্ট্রি হয়েছে!');loadDashboard();}
+  else msg('salMsg','❌ '+(r.error||''),false);
+}
+async function markSPaid(id){
+  const r=await api('markSalaryPaid',{id});
+  if(r.ok){await loadSalaries();loadDashboard();}
+  else alert('❌ '+(r.error||''));
+}
+
+/* ══ PASSWORD ══ */
+async function changePassword(){
+  const op=$('pw_old').value,np=$('pw_new').value,cf=$('pw_confirm').value;
+  if(np!==cf){msg('pwMsg','❌ নতুন পাসওয়ার্ড মিলছে না',false);return;}
+  if(np.length<6){msg('pwMsg','❌ পাসওয়ার্ড কমপক্ষে ৬ অক্ষর',false);return;}
+  const r=await api('changePassword',{oldPass:op,newPass:np});
+  if(r.ok){msg('pwMsg','✅ পাসওয়ার্ড পরিবর্তিত!');['pw_old','pw_new','pw_confirm'].forEach(id=>{const e=$(id);if(e)e.value='';}); }
+  else msg('pwMsg','❌ '+(r.error||''),false);
+}
+
+/* ══ BOOT ══ */
+init();
+</script>
+</body>
+</html>
